@@ -1,0 +1,8 @@
+// Validating benchmarks:
+Failed to execute benchmark 'AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]', exception was: 'Method 'Program+Publics.AsynctoSync' not found.'
+Failed to execute benchmark 'AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]', exception was: 'Method 'Program+Publics.AsynctoSync' not found.'
+Failed to execute benchmark 'AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]', exception was: 'Method 'Program+Publics.AsynctoSync' not found.'
+Failed to execute benchmark 'AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]', exception was: 'Method 'Program+Publics.AsynctoSync' not found.'
+Assembly dynamicBench which defines benchmarks is non-optimized
+Benchmark was built without optimization enabled (most probably a DEBUG configuration). Please, build it in RELEASE.
+If you want to debug the benchmarks, please see https://benchmarkdotnet.org/articles/guides/troubleshooting.html#debugging-benchmarks.

@@ -1,0 +1,2298 @@
+// Validating benchmarks:
+// ***** BenchmarkRunner: Start   *****
+// ***** Found 12 benchmark(s) in total *****
+// ***** Building 1 exe(s) in Parallel: Start   *****
+Unable to find .sln file. Will use current directory /Users/brandondimperio/projects/dynamicBench to search for project file. If you don't use .sln file on purpose it should not be a problem.
+// start dotnet restore  /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b
+// command took 1.45s and exited with 0
+// start dotnet build -c Release  --no-restore /p:UseSharedCompilation=false /p:BuildInParallel=false /m:1 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b
+// command took 4.93s and exited with 0
+// ***** Done, took 00:00:06 (6.57 sec)   *****
+// Found 12 benchmarks:
+//   AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+//   AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+//   AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+//   AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+//   AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+//   AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+//   AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+//   AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+//   AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+//   AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+//   AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+//   AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+
+// **************************
+// Benchmark: AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 0)" --job "NetCoreApp21" --benchmarkId 0 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 313007.00 ns, 313.0070 us/op
+WorkloadJitting  1: 1 op, 27987318.00 ns, 27.9873 ms/op
+
+OverheadJitting  2: 16 op, 252637.00 ns, 15.7898 us/op
+WorkloadJitting  2: 16 op, 1454733.00 ns, 90.9208 us/op
+
+WorkloadPilot    1: 16 op, 877398.00 ns, 54.8374 us/op
+WorkloadPilot    2: 32 op, 1352969.00 ns, 42.2803 us/op
+WorkloadPilot    3: 64 op, 2615906.00 ns, 40.8735 us/op
+WorkloadPilot    4: 128 op, 5424091.00 ns, 42.3757 us/op
+WorkloadPilot    5: 256 op, 10592547.00 ns, 41.3771 us/op
+WorkloadPilot    6: 512 op, 23894302.00 ns, 46.6686 us/op
+WorkloadPilot    7: 1024 op, 44340116.00 ns, 43.3009 us/op
+WorkloadPilot    8: 2048 op, 83847194.00 ns, 40.9410 us/op
+WorkloadPilot    9: 4096 op, 165859333.00 ns, 40.4930 us/op
+WorkloadPilot   10: 8192 op, 328023421.00 ns, 40.0419 us/op
+WorkloadPilot   11: 16384 op, 661918802.00 ns, 40.4003 us/op
+
+OverheadWarmup   1: 16384 op, 27459.00 ns, 1.6760 ns/op
+OverheadWarmup   2: 16384 op, 25063.00 ns, 1.5297 ns/op
+OverheadWarmup   3: 16384 op, 25048.00 ns, 1.5288 ns/op
+OverheadWarmup   4: 16384 op, 25032.00 ns, 1.5278 ns/op
+OverheadWarmup   5: 16384 op, 25061.00 ns, 1.5296 ns/op
+OverheadWarmup   6: 16384 op, 25033.00 ns, 1.5279 ns/op
+OverheadWarmup   7: 16384 op, 25114.00 ns, 1.5328 ns/op
+OverheadWarmup   8: 16384 op, 25091.00 ns, 1.5314 ns/op
+
+OverheadActual   1: 16384 op, 25149.00 ns, 1.5350 ns/op
+OverheadActual   2: 16384 op, 25583.00 ns, 1.5615 ns/op
+OverheadActual   3: 16384 op, 25249.00 ns, 1.5411 ns/op
+OverheadActual   4: 16384 op, 25164.00 ns, 1.5359 ns/op
+OverheadActual   5: 16384 op, 25086.00 ns, 1.5311 ns/op
+OverheadActual   6: 16384 op, 24742.00 ns, 1.5101 ns/op
+OverheadActual   7: 16384 op, 24806.00 ns, 1.5140 ns/op
+OverheadActual   8: 16384 op, 25328.00 ns, 1.5459 ns/op
+OverheadActual   9: 16384 op, 35228.00 ns, 2.1501 ns/op
+OverheadActual  10: 16384 op, 25104.00 ns, 1.5322 ns/op
+OverheadActual  11: 16384 op, 25335.00 ns, 1.5463 ns/op
+OverheadActual  12: 16384 op, 47646.00 ns, 2.9081 ns/op
+OverheadActual  13: 16384 op, 25251.00 ns, 1.5412 ns/op
+OverheadActual  14: 16384 op, 24999.00 ns, 1.5258 ns/op
+OverheadActual  15: 16384 op, 25326.00 ns, 1.5458 ns/op
+
+WorkloadWarmup   1: 16384 op, 660842177.00 ns, 40.3346 us/op
+WorkloadWarmup   2: 16384 op, 650692433.00 ns, 39.7151 us/op
+WorkloadWarmup   3: 16384 op, 661911899.00 ns, 40.3999 us/op
+WorkloadWarmup   4: 16384 op, 658865646.00 ns, 40.2140 us/op
+WorkloadWarmup   5: 16384 op, 666731566.00 ns, 40.6941 us/op
+WorkloadWarmup   6: 16384 op, 664822426.00 ns, 40.5775 us/op
+WorkloadWarmup   7: 16384 op, 650091977.00 ns, 39.6785 us/op
+WorkloadWarmup   8: 16384 op, 654271192.00 ns, 39.9335 us/op
+WorkloadWarmup   9: 16384 op, 661196826.00 ns, 40.3563 us/op
+WorkloadWarmup  10: 16384 op, 652237618.00 ns, 39.8094 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 665659084.00 ns, 40.6286 us/op
+WorkloadActual   2: 16384 op, 669528570.00 ns, 40.8648 us/op
+WorkloadActual   3: 16384 op, 655458127.00 ns, 40.0060 us/op
+WorkloadActual   4: 16384 op, 665450269.00 ns, 40.6159 us/op
+WorkloadActual   5: 16384 op, 655022896.00 ns, 39.9794 us/op
+WorkloadActual   6: 16384 op, 674724929.00 ns, 41.1819 us/op
+WorkloadActual   7: 16384 op, 672707035.00 ns, 41.0588 us/op
+WorkloadActual   8: 16384 op, 664466411.00 ns, 40.5558 us/op
+WorkloadActual   9: 16384 op, 673740234.00 ns, 41.1218 us/op
+WorkloadActual  10: 16384 op, 685312357.00 ns, 41.8281 us/op
+WorkloadActual  11: 16384 op, 674741053.00 ns, 41.1829 us/op
+WorkloadActual  12: 16384 op, 681522375.00 ns, 41.5968 us/op
+WorkloadActual  13: 16384 op, 684000847.00 ns, 41.7481 us/op
+WorkloadActual  14: 16384 op, 683845491.00 ns, 41.7386 us/op
+WorkloadActual  15: 16384 op, 692255744.00 ns, 42.2519 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 665633835.00 ns, 40.6271 us/op
+WorkloadResult   2: 16384 op, 669503321.00 ns, 40.8632 us/op
+WorkloadResult   3: 16384 op, 655432878.00 ns, 40.0044 us/op
+WorkloadResult   4: 16384 op, 665425020.00 ns, 40.6143 us/op
+WorkloadResult   5: 16384 op, 654997647.00 ns, 39.9779 us/op
+WorkloadResult   6: 16384 op, 674699680.00 ns, 41.1804 us/op
+WorkloadResult   7: 16384 op, 672681786.00 ns, 41.0572 us/op
+WorkloadResult   8: 16384 op, 664441162.00 ns, 40.5543 us/op
+WorkloadResult   9: 16384 op, 673714985.00 ns, 41.1203 us/op
+WorkloadResult  10: 16384 op, 685287108.00 ns, 41.8266 us/op
+WorkloadResult  11: 16384 op, 674715804.00 ns, 41.1814 us/op
+WorkloadResult  12: 16384 op, 681497126.00 ns, 41.5953 us/op
+WorkloadResult  13: 16384 op, 683975598.00 ns, 41.7466 us/op
+WorkloadResult  14: 16384 op, 683820242.00 ns, 41.7371 us/op
+WorkloadResult  15: 16384 op, 692230495.00 ns, 42.2504 us/op
+GC:  16 0 0 62390200 16384
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 0)" --job "NetCoreApp21" --benchmarkId 0 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 288618.00 ns, 288.6180 us/op
+WorkloadJitting  1: 1 op, 23316704.00 ns, 23.3167 ms/op
+
+OverheadJitting  2: 16 op, 256117.00 ns, 16.0073 us/op
+WorkloadJitting  2: 16 op, 1550308.00 ns, 96.8943 us/op
+
+WorkloadPilot    1: 16 op, 1173036.00 ns, 73.3148 us/op
+WorkloadPilot    2: 32 op, 1477293.00 ns, 46.1654 us/op
+WorkloadPilot    3: 64 op, 2752580.00 ns, 43.0091 us/op
+WorkloadPilot    4: 128 op, 5707955.00 ns, 44.5934 us/op
+WorkloadPilot    5: 256 op, 11271462.00 ns, 44.0291 us/op
+WorkloadPilot    6: 512 op, 22210791.00 ns, 43.3805 us/op
+WorkloadPilot    7: 1024 op, 46197090.00 ns, 45.1143 us/op
+WorkloadPilot    8: 2048 op, 89021535.00 ns, 43.4675 us/op
+WorkloadPilot    9: 4096 op, 175698724.00 ns, 42.8952 us/op
+WorkloadPilot   10: 8192 op, 364909081.00 ns, 44.5446 us/op
+WorkloadPilot   11: 16384 op, 707652647.00 ns, 43.1917 us/op
+
+OverheadWarmup   1: 16384 op, 29397.00 ns, 1.7943 ns/op
+OverheadWarmup   2: 16384 op, 27400.00 ns, 1.6724 ns/op
+OverheadWarmup   3: 16384 op, 27094.00 ns, 1.6537 ns/op
+OverheadWarmup   4: 16384 op, 27135.00 ns, 1.6562 ns/op
+OverheadWarmup   5: 16384 op, 27126.00 ns, 1.6556 ns/op
+OverheadWarmup   6: 16384 op, 27416.00 ns, 1.6733 ns/op
+OverheadWarmup   7: 16384 op, 27438.00 ns, 1.6747 ns/op
+OverheadWarmup   8: 16384 op, 26702.00 ns, 1.6298 ns/op
+
+OverheadActual   1: 16384 op, 26003.00 ns, 1.5871 ns/op
+OverheadActual   2: 16384 op, 27510.00 ns, 1.6791 ns/op
+OverheadActual   3: 16384 op, 27603.00 ns, 1.6848 ns/op
+OverheadActual   4: 16384 op, 25521.00 ns, 1.5577 ns/op
+OverheadActual   5: 16384 op, 25290.00 ns, 1.5436 ns/op
+OverheadActual   6: 16384 op, 24754.00 ns, 1.5109 ns/op
+OverheadActual   7: 16384 op, 25301.00 ns, 1.5443 ns/op
+OverheadActual   8: 16384 op, 25275.00 ns, 1.5427 ns/op
+OverheadActual   9: 16384 op, 25301.00 ns, 1.5443 ns/op
+OverheadActual  10: 16384 op, 25302.00 ns, 1.5443 ns/op
+OverheadActual  11: 16384 op, 24998.00 ns, 1.5258 ns/op
+OverheadActual  12: 16384 op, 59608.00 ns, 3.6382 ns/op
+OverheadActual  13: 16384 op, 25238.00 ns, 1.5404 ns/op
+OverheadActual  14: 16384 op, 25243.00 ns, 1.5407 ns/op
+OverheadActual  15: 16384 op, 25974.00 ns, 1.5853 ns/op
+
+WorkloadWarmup   1: 16384 op, 719071042.00 ns, 43.8886 us/op
+WorkloadWarmup   2: 16384 op, 714645704.00 ns, 43.6185 us/op
+WorkloadWarmup   3: 16384 op, 714943872.00 ns, 43.6367 us/op
+WorkloadWarmup   4: 16384 op, 726365688.00 ns, 44.3338 us/op
+WorkloadWarmup   5: 16384 op, 719170205.00 ns, 43.8947 us/op
+WorkloadWarmup   6: 16384 op, 711542279.00 ns, 43.4291 us/op
+WorkloadWarmup   7: 16384 op, 704856590.00 ns, 43.0210 us/op
+WorkloadWarmup   8: 16384 op, 715099923.00 ns, 43.6462 us/op
+WorkloadWarmup   9: 16384 op, 720290661.00 ns, 43.9631 us/op
+WorkloadWarmup  10: 16384 op, 714377869.00 ns, 43.6022 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 715683936.00 ns, 43.6819 us/op
+WorkloadActual   2: 16384 op, 715253728.00 ns, 43.6556 us/op
+WorkloadActual   3: 16384 op, 725435740.00 ns, 44.2771 us/op
+WorkloadActual   4: 16384 op, 737350153.00 ns, 45.0043 us/op
+WorkloadActual   5: 16384 op, 718810628.00 ns, 43.8727 us/op
+WorkloadActual   6: 16384 op, 741910268.00 ns, 45.2826 us/op
+WorkloadActual   7: 16384 op, 731477968.00 ns, 44.6459 us/op
+WorkloadActual   8: 16384 op, 790734197.00 ns, 48.2626 us/op
+WorkloadActual   9: 16384 op, 737786580.00 ns, 45.0309 us/op
+WorkloadActual  10: 16384 op, 722635754.00 ns, 44.1062 us/op
+WorkloadActual  11: 16384 op, 723212097.00 ns, 44.1414 us/op
+WorkloadActual  12: 16384 op, 753190017.00 ns, 45.9711 us/op
+WorkloadActual  13: 16384 op, 765024605.00 ns, 46.6934 us/op
+WorkloadActual  14: 16384 op, 742093168.00 ns, 45.2938 us/op
+WorkloadActual  15: 16384 op, 747515794.00 ns, 45.6247 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 715658635.00 ns, 43.6803 us/op
+WorkloadResult   2: 16384 op, 715228427.00 ns, 43.6541 us/op
+WorkloadResult   3: 16384 op, 725410439.00 ns, 44.2755 us/op
+WorkloadResult   4: 16384 op, 737324852.00 ns, 45.0027 us/op
+WorkloadResult   5: 16384 op, 718785327.00 ns, 43.8712 us/op
+WorkloadResult   6: 16384 op, 741884967.00 ns, 45.2811 us/op
+WorkloadResult   7: 16384 op, 731452667.00 ns, 44.6443 us/op
+WorkloadResult   8: 16384 op, 737761279.00 ns, 45.0294 us/op
+WorkloadResult   9: 16384 op, 722610453.00 ns, 44.1046 us/op
+WorkloadResult  10: 16384 op, 723186796.00 ns, 44.1398 us/op
+WorkloadResult  11: 16384 op, 753164716.00 ns, 45.9695 us/op
+WorkloadResult  12: 16384 op, 764999304.00 ns, 46.6919 us/op
+WorkloadResult  13: 16384 op, 742067867.00 ns, 45.2922 us/op
+WorkloadResult  14: 16384 op, 747490493.00 ns, 45.6232 us/op
+GC:  16 0 0 62390272 16384
+
+// AfterAll
+
+Mean = 42.8826 us, StdErr = 0.3796 us (0.89%); N = 29, StdDev = 2.0441 us
+Min = 39.9779 us, Q1 = 41.0888 us, Median = 42.2504 us, Q3 = 44.8235 us, Max = 46.6919 us
+IQR = 3.7348 us, LowerFence = 35.4866 us, UpperFence = 50.4257 us
+ConfidenceInterval = [41.4881 us; 44.2772 us] (CI 99.9%), Margin = 1.3946 us (3.25% of Mean)
+Skewness = 0.19, Kurtosis = 1.52, MValue = 3.73
+
+// **************************
+// Benchmark: AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 0)" --job "NetCoreApp21" --benchmarkId 1 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 360258.00 ns, 360.2580 us/op
+WorkloadJitting  1: 1 op, 29365294.00 ns, 29.3653 ms/op
+
+OverheadJitting  2: 16 op, 318317.00 ns, 19.8948 us/op
+WorkloadJitting  2: 16 op, 1890123.00 ns, 118.1327 us/op
+
+WorkloadPilot    1: 16 op, 1250960.00 ns, 78.1850 us/op
+WorkloadPilot    2: 32 op, 1778548.00 ns, 55.5796 us/op
+WorkloadPilot    3: 64 op, 3847541.00 ns, 60.1178 us/op
+WorkloadPilot    4: 128 op, 7077626.00 ns, 55.2940 us/op
+WorkloadPilot    5: 256 op, 14715180.00 ns, 57.4812 us/op
+WorkloadPilot    6: 512 op, 28737919.00 ns, 56.1287 us/op
+WorkloadPilot    7: 1024 op, 55762934.00 ns, 54.4560 us/op
+WorkloadPilot    8: 2048 op, 103900923.00 ns, 50.7329 us/op
+WorkloadPilot    9: 4096 op, 207088997.00 ns, 50.5588 us/op
+WorkloadPilot   10: 8192 op, 389378733.00 ns, 47.5316 us/op
+WorkloadPilot   11: 16384 op, 785923109.00 ns, 47.9689 us/op
+
+OverheadWarmup   1: 16384 op, 29245.00 ns, 1.7850 ns/op
+OverheadWarmup   2: 16384 op, 27050.00 ns, 1.6510 ns/op
+OverheadWarmup   3: 16384 op, 26686.00 ns, 1.6288 ns/op
+OverheadWarmup   4: 16384 op, 26662.00 ns, 1.6273 ns/op
+OverheadWarmup   5: 16384 op, 27053.00 ns, 1.6512 ns/op
+OverheadWarmup   6: 16384 op, 27834.00 ns, 1.6989 ns/op
+OverheadWarmup   7: 16384 op, 27872.00 ns, 1.7012 ns/op
+OverheadWarmup   8: 16384 op, 27546.00 ns, 1.6813 ns/op
+OverheadWarmup   9: 16384 op, 27463.00 ns, 1.6762 ns/op
+OverheadWarmup  10: 16384 op, 27097.00 ns, 1.6539 ns/op
+
+OverheadActual   1: 16384 op, 27803.00 ns, 1.6970 ns/op
+OverheadActual   2: 16384 op, 27887.00 ns, 1.7021 ns/op
+OverheadActual   3: 16384 op, 27872.00 ns, 1.7012 ns/op
+OverheadActual   4: 16384 op, 27924.00 ns, 1.7043 ns/op
+OverheadActual   5: 16384 op, 27843.00 ns, 1.6994 ns/op
+OverheadActual   6: 16384 op, 28632.00 ns, 1.7476 ns/op
+OverheadActual   7: 16384 op, 28267.00 ns, 1.7253 ns/op
+OverheadActual   8: 16384 op, 27439.00 ns, 1.6747 ns/op
+OverheadActual   9: 16384 op, 27456.00 ns, 1.6758 ns/op
+OverheadActual  10: 16384 op, 27867.00 ns, 1.7009 ns/op
+OverheadActual  11: 16384 op, 27488.00 ns, 1.6777 ns/op
+OverheadActual  12: 16384 op, 27835.00 ns, 1.6989 ns/op
+OverheadActual  13: 16384 op, 27973.00 ns, 1.7073 ns/op
+OverheadActual  14: 16384 op, 27460.00 ns, 1.6760 ns/op
+OverheadActual  15: 16384 op, 27863.00 ns, 1.7006 ns/op
+
+WorkloadWarmup   1: 16384 op, 786820658.00 ns, 48.0237 us/op
+WorkloadWarmup   2: 16384 op, 775266046.00 ns, 47.3185 us/op
+WorkloadWarmup   3: 16384 op, 805177732.00 ns, 49.1441 us/op
+WorkloadWarmup   4: 16384 op, 796172968.00 ns, 48.5945 us/op
+WorkloadWarmup   5: 16384 op, 796929401.00 ns, 48.6407 us/op
+WorkloadWarmup   6: 16384 op, 790875441.00 ns, 48.2712 us/op
+WorkloadWarmup   7: 16384 op, 783338901.00 ns, 47.8112 us/op
+WorkloadWarmup   8: 16384 op, 810149617.00 ns, 49.4476 us/op
+WorkloadWarmup   9: 16384 op, 804429914.00 ns, 49.0985 us/op
+WorkloadWarmup  10: 16384 op, 797312305.00 ns, 48.6641 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 796583402.00 ns, 48.6196 us/op
+WorkloadActual   2: 16384 op, 803442106.00 ns, 49.0382 us/op
+WorkloadActual   3: 16384 op, 797449052.00 ns, 48.6724 us/op
+WorkloadActual   4: 16384 op, 800315881.00 ns, 48.8474 us/op
+WorkloadActual   5: 16384 op, 789320277.00 ns, 48.1763 us/op
+WorkloadActual   6: 16384 op, 802540261.00 ns, 48.9832 us/op
+WorkloadActual   7: 16384 op, 788996294.00 ns, 48.1565 us/op
+WorkloadActual   8: 16384 op, 798515494.00 ns, 48.7375 us/op
+WorkloadActual   9: 16384 op, 780986072.00 ns, 47.6676 us/op
+WorkloadActual  10: 16384 op, 803145694.00 ns, 49.0201 us/op
+WorkloadActual  11: 16384 op, 802135596.00 ns, 48.9585 us/op
+WorkloadActual  12: 16384 op, 810560313.00 ns, 49.4727 us/op
+WorkloadActual  13: 16384 op, 791595646.00 ns, 48.3152 us/op
+WorkloadActual  14: 16384 op, 799401002.00 ns, 48.7916 us/op
+WorkloadActual  15: 16384 op, 798820684.00 ns, 48.7561 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 796555539.00 ns, 48.6179 us/op
+WorkloadResult   2: 16384 op, 803414243.00 ns, 49.0365 us/op
+WorkloadResult   3: 16384 op, 797421189.00 ns, 48.6707 us/op
+WorkloadResult   4: 16384 op, 800288018.00 ns, 48.8457 us/op
+WorkloadResult   5: 16384 op, 789292414.00 ns, 48.1746 us/op
+WorkloadResult   6: 16384 op, 802512398.00 ns, 48.9815 us/op
+WorkloadResult   7: 16384 op, 788968431.00 ns, 48.1548 us/op
+WorkloadResult   8: 16384 op, 798487631.00 ns, 48.7358 us/op
+WorkloadResult   9: 16384 op, 780958209.00 ns, 47.6659 us/op
+WorkloadResult  10: 16384 op, 803117831.00 ns, 49.0184 us/op
+WorkloadResult  11: 16384 op, 802107733.00 ns, 48.9568 us/op
+WorkloadResult  12: 16384 op, 810532450.00 ns, 49.4710 us/op
+WorkloadResult  13: 16384 op, 791567783.00 ns, 48.3135 us/op
+WorkloadResult  14: 16384 op, 799373139.00 ns, 48.7899 us/op
+WorkloadResult  15: 16384 op, 798792821.00 ns, 48.7544 us/op
+GC:  17 0 0 63964536 16384
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 0)" --job "NetCoreApp21" --benchmarkId 1 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 306548.00 ns, 306.5480 us/op
+WorkloadJitting  1: 1 op, 24170416.00 ns, 24.1704 ms/op
+
+OverheadJitting  2: 16 op, 256979.00 ns, 16.0612 us/op
+WorkloadJitting  2: 16 op, 1613502.00 ns, 100.8439 us/op
+
+WorkloadPilot    1: 16 op, 1176058.00 ns, 73.5036 us/op
+WorkloadPilot    2: 32 op, 2457129.00 ns, 76.7853 us/op
+WorkloadPilot    3: 64 op, 3981700.00 ns, 62.2141 us/op
+WorkloadPilot    4: 128 op, 8679818.00 ns, 67.8111 us/op
+WorkloadPilot    5: 256 op, 11469415.00 ns, 44.8024 us/op
+WorkloadPilot    6: 512 op, 22696098.00 ns, 44.3283 us/op
+WorkloadPilot    7: 1024 op, 44507682.00 ns, 43.4645 us/op
+WorkloadPilot    8: 2048 op, 89828807.00 ns, 43.8617 us/op
+WorkloadPilot    9: 4096 op, 183962200.00 ns, 44.9126 us/op
+WorkloadPilot   10: 8192 op, 406747352.00 ns, 49.6518 us/op
+WorkloadPilot   11: 16384 op, 796649689.00 ns, 48.6236 us/op
+
+OverheadWarmup   1: 16384 op, 29223.00 ns, 1.7836 ns/op
+OverheadWarmup   2: 16384 op, 27056.00 ns, 1.6514 ns/op
+OverheadWarmup   3: 16384 op, 27099.00 ns, 1.6540 ns/op
+OverheadWarmup   4: 16384 op, 27012.00 ns, 1.6487 ns/op
+OverheadWarmup   5: 16384 op, 27048.00 ns, 1.6509 ns/op
+OverheadWarmup   6: 16384 op, 27090.00 ns, 1.6534 ns/op
+OverheadWarmup   7: 16384 op, 27050.00 ns, 1.6510 ns/op
+
+OverheadActual   1: 16384 op, 27906.00 ns, 1.7032 ns/op
+OverheadActual   2: 16384 op, 26473.00 ns, 1.6158 ns/op
+OverheadActual   3: 16384 op, 26091.00 ns, 1.5925 ns/op
+OverheadActual   4: 16384 op, 24387.00 ns, 1.4885 ns/op
+OverheadActual   5: 16384 op, 24297.00 ns, 1.4830 ns/op
+OverheadActual   6: 16384 op, 24016.00 ns, 1.4658 ns/op
+OverheadActual   7: 16384 op, 24208.00 ns, 1.4775 ns/op
+OverheadActual   8: 16384 op, 24187.00 ns, 1.4763 ns/op
+OverheadActual   9: 16384 op, 23954.00 ns, 1.4620 ns/op
+OverheadActual  10: 16384 op, 24292.00 ns, 1.4827 ns/op
+OverheadActual  11: 16384 op, 24230.00 ns, 1.4789 ns/op
+OverheadActual  12: 16384 op, 23993.00 ns, 1.4644 ns/op
+OverheadActual  13: 16384 op, 27655.00 ns, 1.6879 ns/op
+OverheadActual  14: 16384 op, 27308.00 ns, 1.6667 ns/op
+OverheadActual  15: 16384 op, 24347.00 ns, 1.4860 ns/op
+OverheadActual  16: 16384 op, 29237.00 ns, 1.7845 ns/op
+OverheadActual  17: 16384 op, 25661.00 ns, 1.5662 ns/op
+OverheadActual  18: 16384 op, 24033.00 ns, 1.4669 ns/op
+OverheadActual  19: 16384 op, 24942.00 ns, 1.5223 ns/op
+OverheadActual  20: 16384 op, 24256.00 ns, 1.4805 ns/op
+
+WorkloadWarmup   1: 16384 op, 783201835.00 ns, 47.8028 us/op
+WorkloadWarmup   2: 16384 op, 794272347.00 ns, 48.4785 us/op
+WorkloadWarmup   3: 16384 op, 784647914.00 ns, 47.8911 us/op
+WorkloadWarmup   4: 16384 op, 800871067.00 ns, 48.8813 us/op
+WorkloadWarmup   5: 16384 op, 795493006.00 ns, 48.5530 us/op
+WorkloadWarmup   6: 16384 op, 798450403.00 ns, 48.7335 us/op
+WorkloadWarmup   7: 16384 op, 791186886.00 ns, 48.2902 us/op
+WorkloadWarmup   8: 16384 op, 788378131.00 ns, 48.1188 us/op
+WorkloadWarmup   9: 16384 op, 783057020.00 ns, 47.7940 us/op
+WorkloadWarmup  10: 16384 op, 786164900.00 ns, 47.9837 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 789954998.00 ns, 48.2150 us/op
+WorkloadActual   2: 16384 op, 779597144.00 ns, 47.5828 us/op
+WorkloadActual   3: 16384 op, 770210476.00 ns, 47.0099 us/op
+WorkloadActual   4: 16384 op, 775419138.00 ns, 47.3278 us/op
+WorkloadActual   5: 16384 op, 790669228.00 ns, 48.2586 us/op
+WorkloadActual   6: 16384 op, 768405244.00 ns, 46.8997 us/op
+WorkloadActual   7: 16384 op, 786949112.00 ns, 48.0316 us/op
+WorkloadActual   8: 16384 op, 761549834.00 ns, 46.4813 us/op
+WorkloadActual   9: 16384 op, 783046704.00 ns, 47.7934 us/op
+WorkloadActual  10: 16384 op, 760957996.00 ns, 46.4452 us/op
+WorkloadActual  11: 16384 op, 770945733.00 ns, 47.0548 us/op
+WorkloadActual  12: 16384 op, 762589032.00 ns, 46.5447 us/op
+WorkloadActual  13: 16384 op, 785133295.00 ns, 47.9207 us/op
+WorkloadActual  14: 16384 op, 781976737.00 ns, 47.7281 us/op
+WorkloadActual  15: 16384 op, 783430638.00 ns, 47.8168 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 789930676.00 ns, 48.2135 us/op
+WorkloadResult   2: 16384 op, 779572822.00 ns, 47.5813 us/op
+WorkloadResult   3: 16384 op, 770186154.00 ns, 47.0084 us/op
+WorkloadResult   4: 16384 op, 775394816.00 ns, 47.3263 us/op
+WorkloadResult   5: 16384 op, 790644906.00 ns, 48.2571 us/op
+WorkloadResult   6: 16384 op, 768380922.00 ns, 46.8982 us/op
+WorkloadResult   7: 16384 op, 786924790.00 ns, 48.0301 us/op
+WorkloadResult   8: 16384 op, 761525512.00 ns, 46.4798 us/op
+WorkloadResult   9: 16384 op, 783022382.00 ns, 47.7919 us/op
+WorkloadResult  10: 16384 op, 760933674.00 ns, 46.4437 us/op
+WorkloadResult  11: 16384 op, 770921411.00 ns, 47.0533 us/op
+WorkloadResult  12: 16384 op, 762564710.00 ns, 46.5433 us/op
+WorkloadResult  13: 16384 op, 785108973.00 ns, 47.9192 us/op
+WorkloadResult  14: 16384 op, 781952415.00 ns, 47.7266 us/op
+WorkloadResult  15: 16384 op, 783406316.00 ns, 47.8153 us/op
+GC:  17 0 0 63964608 16384
+
+// AfterAll
+
+Mean = 48.0425 us, StdErr = 0.1535 us (0.32%); N = 30, StdDev = 0.8407 us
+Min = 46.4437 us, Q1 = 47.5813 us, Median = 48.1647 us, Q3 = 48.7544 us, Max = 49.4710 us
+IQR = 1.1731 us, LowerFence = 45.8217 us, UpperFence = 50.5141 us
+ConfidenceInterval = [47.4809 us; 48.6042 us] (CI 99.9%), Margin = 0.5617 us (1.17% of Mean)
+Skewness = -0.39, Kurtosis = 2.05, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 0)" --job "NetCoreApp21" --benchmarkId 2 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 304018.00 ns, 304.0180 us/op
+WorkloadJitting  1: 1 op, 25998783.00 ns, 25.9988 ms/op
+
+OverheadJitting  2: 16 op, 274598.00 ns, 17.1624 us/op
+WorkloadJitting  2: 16 op, 1524119.00 ns, 95.2574 us/op
+
+WorkloadPilot    1: 16 op, 1171453.00 ns, 73.2158 us/op
+WorkloadPilot    2: 32 op, 1577038.00 ns, 49.2824 us/op
+WorkloadPilot    3: 64 op, 3293180.00 ns, 51.4559 us/op
+WorkloadPilot    4: 128 op, 6237788.00 ns, 48.7327 us/op
+WorkloadPilot    5: 256 op, 12366666.00 ns, 48.3073 us/op
+WorkloadPilot    6: 512 op, 27362292.00 ns, 53.4420 us/op
+WorkloadPilot    7: 1024 op, 52186063.00 ns, 50.9630 us/op
+WorkloadPilot    8: 2048 op, 96082894.00 ns, 46.9155 us/op
+WorkloadPilot    9: 4096 op, 189946220.00 ns, 46.3736 us/op
+WorkloadPilot   10: 8192 op, 398037423.00 ns, 48.5886 us/op
+WorkloadPilot   11: 16384 op, 825111592.00 ns, 50.3608 us/op
+
+OverheadWarmup   1: 16384 op, 27545.00 ns, 1.6812 ns/op
+OverheadWarmup   2: 16384 op, 25301.00 ns, 1.5443 ns/op
+OverheadWarmup   3: 16384 op, 25008.00 ns, 1.5264 ns/op
+OverheadWarmup   4: 16384 op, 25332.00 ns, 1.5461 ns/op
+OverheadWarmup   5: 16384 op, 25291.00 ns, 1.5436 ns/op
+OverheadWarmup   6: 16384 op, 25050.00 ns, 1.5289 ns/op
+OverheadWarmup   7: 16384 op, 25316.00 ns, 1.5452 ns/op
+OverheadWarmup   8: 16384 op, 25310.00 ns, 1.5448 ns/op
+
+OverheadActual   1: 16384 op, 25295.00 ns, 1.5439 ns/op
+OverheadActual   2: 16384 op, 25421.00 ns, 1.5516 ns/op
+OverheadActual   3: 16384 op, 25420.00 ns, 1.5515 ns/op
+OverheadActual   4: 16384 op, 25446.00 ns, 1.5531 ns/op
+OverheadActual   5: 16384 op, 25326.00 ns, 1.5458 ns/op
+OverheadActual   6: 16384 op, 25257.00 ns, 1.5416 ns/op
+OverheadActual   7: 16384 op, 25328.00 ns, 1.5459 ns/op
+OverheadActual   8: 16384 op, 25331.00 ns, 1.5461 ns/op
+OverheadActual   9: 16384 op, 26043.00 ns, 1.5895 ns/op
+OverheadActual  10: 16384 op, 25309.00 ns, 1.5447 ns/op
+OverheadActual  11: 16384 op, 25298.00 ns, 1.5441 ns/op
+OverheadActual  12: 16384 op, 24997.00 ns, 1.5257 ns/op
+OverheadActual  13: 16384 op, 25265.00 ns, 1.5421 ns/op
+OverheadActual  14: 16384 op, 24737.00 ns, 1.5098 ns/op
+OverheadActual  15: 16384 op, 25303.00 ns, 1.5444 ns/op
+
+WorkloadWarmup   1: 16384 op, 823701176.00 ns, 50.2747 us/op
+WorkloadWarmup   2: 16384 op, 841848044.00 ns, 51.3823 us/op
+WorkloadWarmup   3: 16384 op, 810424154.00 ns, 49.4644 us/op
+WorkloadWarmup   4: 16384 op, 807030116.00 ns, 49.2572 us/op
+WorkloadWarmup   5: 16384 op, 806993656.00 ns, 49.2550 us/op
+WorkloadWarmup   6: 16384 op, 801967494.00 ns, 48.9482 us/op
+WorkloadWarmup   7: 16384 op, 815590786.00 ns, 49.7797 us/op
+WorkloadWarmup   8: 16384 op, 818378551.00 ns, 49.9499 us/op
+WorkloadWarmup   9: 16384 op, 809521539.00 ns, 49.4093 us/op
+WorkloadWarmup  10: 16384 op, 803492447.00 ns, 49.0413 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 820316101.00 ns, 50.0681 us/op
+WorkloadActual   2: 16384 op, 821165420.00 ns, 50.1200 us/op
+WorkloadActual   3: 16384 op, 810643351.00 ns, 49.4777 us/op
+WorkloadActual   4: 16384 op, 828966501.00 ns, 50.5961 us/op
+WorkloadActual   5: 16384 op, 814414375.00 ns, 49.7079 us/op
+WorkloadActual   6: 16384 op, 809854166.00 ns, 49.4296 us/op
+WorkloadActual   7: 16384 op, 810410869.00 ns, 49.4636 us/op
+WorkloadActual   8: 16384 op, 822521415.00 ns, 50.2027 us/op
+WorkloadActual   9: 16384 op, 811738260.00 ns, 49.5446 us/op
+WorkloadActual  10: 16384 op, 817016205.00 ns, 49.8667 us/op
+WorkloadActual  11: 16384 op, 811752027.00 ns, 49.5454 us/op
+WorkloadActual  12: 16384 op, 818085071.00 ns, 49.9320 us/op
+WorkloadActual  13: 16384 op, 814877656.00 ns, 49.7362 us/op
+WorkloadActual  14: 16384 op, 813279513.00 ns, 49.6386 us/op
+WorkloadActual  15: 16384 op, 806097405.00 ns, 49.2003 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 820290792.00 ns, 50.0666 us/op
+WorkloadResult   2: 16384 op, 821140111.00 ns, 50.1184 us/op
+WorkloadResult   3: 16384 op, 810618042.00 ns, 49.4762 us/op
+WorkloadResult   4: 16384 op, 828941192.00 ns, 50.5946 us/op
+WorkloadResult   5: 16384 op, 814389066.00 ns, 49.7064 us/op
+WorkloadResult   6: 16384 op, 809828857.00 ns, 49.4280 us/op
+WorkloadResult   7: 16384 op, 810385560.00 ns, 49.4620 us/op
+WorkloadResult   8: 16384 op, 822496106.00 ns, 50.2012 us/op
+WorkloadResult   9: 16384 op, 811712951.00 ns, 49.5430 us/op
+WorkloadResult  10: 16384 op, 816990896.00 ns, 49.8652 us/op
+WorkloadResult  11: 16384 op, 811726718.00 ns, 49.5439 us/op
+WorkloadResult  12: 16384 op, 818059762.00 ns, 49.9304 us/op
+WorkloadResult  13: 16384 op, 814852347.00 ns, 49.7346 us/op
+WorkloadResult  14: 16384 op, 813254204.00 ns, 49.6371 us/op
+WorkloadResult  15: 16384 op, 806072096.00 ns, 49.1987 us/op
+GC:  17 0 0 66063856 16384
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 0)" --job "NetCoreApp21" --benchmarkId 2 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 483575.00 ns, 483.5750 us/op
+WorkloadJitting  1: 1 op, 31084206.00 ns, 31.0842 ms/op
+
+OverheadJitting  2: 16 op, 274846.00 ns, 17.1779 us/op
+WorkloadJitting  2: 16 op, 1639078.00 ns, 102.4424 us/op
+
+WorkloadPilot    1: 16 op, 1061557.00 ns, 66.3473 us/op
+WorkloadPilot    2: 32 op, 1717977.00 ns, 53.6868 us/op
+WorkloadPilot    3: 64 op, 2967790.00 ns, 46.3717 us/op
+WorkloadPilot    4: 128 op, 6026960.00 ns, 47.0856 us/op
+WorkloadPilot    5: 256 op, 12532143.00 ns, 48.9537 us/op
+WorkloadPilot    6: 512 op, 23999775.00 ns, 46.8746 us/op
+WorkloadPilot    7: 1024 op, 49189927.00 ns, 48.0370 us/op
+WorkloadPilot    8: 2048 op, 92478502.00 ns, 45.1555 us/op
+WorkloadPilot    9: 4096 op, 183460384.00 ns, 44.7901 us/op
+WorkloadPilot   10: 8192 op, 365242896.00 ns, 44.5853 us/op
+WorkloadPilot   11: 16384 op, 756430195.00 ns, 46.1688 us/op
+
+OverheadWarmup   1: 16384 op, 41253.00 ns, 2.5179 ns/op
+OverheadWarmup   2: 16384 op, 25332.00 ns, 1.5461 ns/op
+OverheadWarmup   3: 16384 op, 25298.00 ns, 1.5441 ns/op
+OverheadWarmup   4: 16384 op, 25313.00 ns, 1.5450 ns/op
+OverheadWarmup   5: 16384 op, 25487.00 ns, 1.5556 ns/op
+OverheadWarmup   6: 16384 op, 26673.00 ns, 1.6280 ns/op
+OverheadWarmup   7: 16384 op, 25289.00 ns, 1.5435 ns/op
+OverheadWarmup   8: 16384 op, 24733.00 ns, 1.5096 ns/op
+OverheadWarmup   9: 16384 op, 24749.00 ns, 1.5106 ns/op
+OverheadWarmup  10: 16384 op, 25316.00 ns, 1.5452 ns/op
+
+OverheadActual   1: 16384 op, 25049.00 ns, 1.5289 ns/op
+OverheadActual   2: 16384 op, 25323.00 ns, 1.5456 ns/op
+OverheadActual   3: 16384 op, 25447.00 ns, 1.5532 ns/op
+OverheadActual   4: 16384 op, 25517.00 ns, 1.5574 ns/op
+OverheadActual   5: 16384 op, 25331.00 ns, 1.5461 ns/op
+OverheadActual   6: 16384 op, 25212.00 ns, 1.5388 ns/op
+OverheadActual   7: 16384 op, 25302.00 ns, 1.5443 ns/op
+OverheadActual   8: 16384 op, 25270.00 ns, 1.5424 ns/op
+OverheadActual   9: 16384 op, 25327.00 ns, 1.5458 ns/op
+OverheadActual  10: 16384 op, 25009.00 ns, 1.5264 ns/op
+OverheadActual  11: 16384 op, 25301.00 ns, 1.5443 ns/op
+OverheadActual  12: 16384 op, 24990.00 ns, 1.5253 ns/op
+OverheadActual  13: 16384 op, 25276.00 ns, 1.5427 ns/op
+OverheadActual  14: 16384 op, 25236.00 ns, 1.5403 ns/op
+OverheadActual  15: 16384 op, 26606.00 ns, 1.6239 ns/op
+
+WorkloadWarmup   1: 16384 op, 779119417.00 ns, 47.5537 us/op
+WorkloadWarmup   2: 16384 op, 780688717.00 ns, 47.6495 us/op
+WorkloadWarmup   3: 16384 op, 786527976.00 ns, 48.0059 us/op
+WorkloadWarmup   4: 16384 op, 785757736.00 ns, 47.9588 us/op
+WorkloadWarmup   5: 16384 op, 774788931.00 ns, 47.2894 us/op
+WorkloadWarmup   6: 16384 op, 788796000.00 ns, 48.1443 us/op
+WorkloadWarmup   7: 16384 op, 781429376.00 ns, 47.6947 us/op
+WorkloadWarmup   8: 16384 op, 788351614.00 ns, 48.1172 us/op
+WorkloadWarmup   9: 16384 op, 784628269.00 ns, 47.8899 us/op
+WorkloadWarmup  10: 16384 op, 798011745.00 ns, 48.7068 us/op
+
+// BeforeActualRun
+WorkloadActual   1: 16384 op, 781635682.00 ns, 47.7073 us/op
+WorkloadActual   2: 16384 op, 770445998.00 ns, 47.0243 us/op
+WorkloadActual   3: 16384 op, 771700031.00 ns, 47.1008 us/op
+WorkloadActual   4: 16384 op, 778947676.00 ns, 47.5432 us/op
+WorkloadActual   5: 16384 op, 782461109.00 ns, 47.7576 us/op
+WorkloadActual   6: 16384 op, 779605119.00 ns, 47.5833 us/op
+WorkloadActual   7: 16384 op, 775252461.00 ns, 47.3177 us/op
+WorkloadActual   8: 16384 op, 778250724.00 ns, 47.5007 us/op
+WorkloadActual   9: 16384 op, 772767114.00 ns, 47.1660 us/op
+WorkloadActual  10: 16384 op, 763331721.00 ns, 46.5901 us/op
+WorkloadActual  11: 16384 op, 785907400.00 ns, 47.9680 us/op
+WorkloadActual  12: 16384 op, 776866404.00 ns, 47.4162 us/op
+WorkloadActual  13: 16384 op, 777557069.00 ns, 47.4583 us/op
+WorkloadActual  14: 16384 op, 777331443.00 ns, 47.4445 us/op
+WorkloadActual  15: 16384 op, 777406010.00 ns, 47.4491 us/op
+
+// AfterActualRun
+WorkloadResult   1: 16384 op, 781610381.00 ns, 47.7057 us/op
+WorkloadResult   2: 16384 op, 770420697.00 ns, 47.0227 us/op
+WorkloadResult   3: 16384 op, 771674730.00 ns, 47.0993 us/op
+WorkloadResult   4: 16384 op, 778922375.00 ns, 47.5416 us/op
+WorkloadResult   5: 16384 op, 782435808.00 ns, 47.7561 us/op
+WorkloadResult   6: 16384 op, 779579818.00 ns, 47.5818 us/op
+WorkloadResult   7: 16384 op, 775227160.00 ns, 47.3161 us/op
+WorkloadResult   8: 16384 op, 778225423.00 ns, 47.4991 us/op
+WorkloadResult   9: 16384 op, 772741813.00 ns, 47.1644 us/op
+WorkloadResult  10: 16384 op, 763306420.00 ns, 46.5885 us/op
+WorkloadResult  11: 16384 op, 785882099.00 ns, 47.9664 us/op
+WorkloadResult  12: 16384 op, 776841103.00 ns, 47.4146 us/op
+WorkloadResult  13: 16384 op, 777531768.00 ns, 47.4568 us/op
+WorkloadResult  14: 16384 op, 777306142.00 ns, 47.4430 us/op
+WorkloadResult  15: 16384 op, 777380709.00 ns, 47.4476 us/op
+GC:  17 0 0 66061856 16384
+
+// AfterAll
+
+Mean = 48.5837 us, StdErr = 0.2285 us (0.47%); N = 30, StdDev = 1.2517 us
+Min = 46.5885 us, Q1 = 47.4476 us, Median = 48.5826 us, Q3 = 49.7064 us, Max = 50.5946 us
+IQR = 2.2588 us, LowerFence = 44.0593 us, UpperFence = 53.0946 us
+ConfidenceInterval = [47.7474 us; 49.4200 us] (CI 99.9%), Margin = 0.8363 us (1.72% of Mean)
+Skewness = 0.02, Kurtosis = 1.26, MValue = 4
+
+// **************************
+// Benchmark: AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 1)" --job "NetCoreApp21" --benchmarkId 3 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 299515.00 ns, 299.5150 us/op
+WorkloadJitting  1: 1 op, 29038623.00 ns, 29.0386 ms/op
+
+OverheadJitting  2: 16 op, 301264.00 ns, 18.8290 us/op
+WorkloadJitting  2: 16 op, 87664992.00 ns, 5.4791 ms/op
+
+WorkloadPilot    1: 16 op, 87618415.00 ns, 5.4762 ms/op
+WorkloadPilot    2: 32 op, 178210114.00 ns, 5.5691 ms/op
+WorkloadPilot    3: 64 op, 345892624.00 ns, 5.4046 ms/op
+WorkloadPilot    4: 128 op, 711696250.00 ns, 5.5601 ms/op
+
+OverheadWarmup   1: 128 op, 3367.00 ns, 26.3047 ns/op
+OverheadWarmup   2: 128 op, 737.00 ns, 5.7578 ns/op
+OverheadWarmup   3: 128 op, 696.00 ns, 5.4375 ns/op
+OverheadWarmup   4: 128 op, 695.00 ns, 5.4297 ns/op
+OverheadWarmup   5: 128 op, 700.00 ns, 5.4688 ns/op
+OverheadWarmup   6: 128 op, 622.00 ns, 4.8594 ns/op
+OverheadWarmup   7: 128 op, 615.00 ns, 4.8047 ns/op
+OverheadWarmup   8: 128 op, 650.00 ns, 5.0781 ns/op
+OverheadWarmup   9: 128 op, 719.00 ns, 5.6172 ns/op
+OverheadWarmup  10: 128 op, 652.00 ns, 5.0938 ns/op
+
+OverheadActual   1: 128 op, 673.00 ns, 5.2578 ns/op
+OverheadActual   2: 128 op, 787.00 ns, 6.1484 ns/op
+OverheadActual   3: 128 op, 795.00 ns, 6.2109 ns/op
+OverheadActual   4: 128 op, 952.00 ns, 7.4375 ns/op
+OverheadActual   5: 128 op, 673.00 ns, 5.2578 ns/op
+OverheadActual   6: 128 op, 643.00 ns, 5.0234 ns/op
+OverheadActual   7: 128 op, 617.00 ns, 4.8203 ns/op
+OverheadActual   8: 128 op, 598.00 ns, 4.6719 ns/op
+OverheadActual   9: 128 op, 695.00 ns, 5.4297 ns/op
+OverheadActual  10: 128 op, 696.00 ns, 5.4375 ns/op
+OverheadActual  11: 128 op, 633.00 ns, 4.9453 ns/op
+OverheadActual  12: 128 op, 675.00 ns, 5.2734 ns/op
+OverheadActual  13: 128 op, 688.00 ns, 5.3750 ns/op
+OverheadActual  14: 128 op, 684.00 ns, 5.3438 ns/op
+OverheadActual  15: 128 op, 695.00 ns, 5.4297 ns/op
+OverheadActual  16: 128 op, 689.00 ns, 5.3828 ns/op
+OverheadActual  17: 128 op, 678.00 ns, 5.2969 ns/op
+OverheadActual  18: 128 op, 809.00 ns, 6.3203 ns/op
+OverheadActual  19: 128 op, 653.00 ns, 5.1016 ns/op
+
+WorkloadWarmup   1: 128 op, 697332638.00 ns, 5.4479 ms/op
+WorkloadWarmup   2: 128 op, 695391476.00 ns, 5.4327 ms/op
+WorkloadWarmup   3: 128 op, 704659534.00 ns, 5.5052 ms/op
+WorkloadWarmup   4: 128 op, 706074462.00 ns, 5.5162 ms/op
+WorkloadWarmup   5: 128 op, 701866010.00 ns, 5.4833 ms/op
+WorkloadWarmup   6: 128 op, 703619115.00 ns, 5.4970 ms/op
+WorkloadWarmup   7: 128 op, 708668929.00 ns, 5.5365 ms/op
+WorkloadWarmup   8: 128 op, 701236568.00 ns, 5.4784 ms/op
+WorkloadWarmup   9: 128 op, 703120308.00 ns, 5.4931 ms/op
+WorkloadWarmup  10: 128 op, 710034404.00 ns, 5.5471 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 699532313.00 ns, 5.4651 ms/op
+WorkloadActual   2: 128 op, 702079889.00 ns, 5.4850 ms/op
+WorkloadActual   3: 128 op, 708409894.00 ns, 5.5345 ms/op
+WorkloadActual   4: 128 op, 697507208.00 ns, 5.4493 ms/op
+WorkloadActual   5: 128 op, 695669455.00 ns, 5.4349 ms/op
+WorkloadActual   6: 128 op, 707919036.00 ns, 5.5306 ms/op
+WorkloadActual   7: 128 op, 695443732.00 ns, 5.4332 ms/op
+WorkloadActual   8: 128 op, 697426702.00 ns, 5.4486 ms/op
+WorkloadActual   9: 128 op, 709651915.00 ns, 5.5442 ms/op
+WorkloadActual  10: 128 op, 696740307.00 ns, 5.4433 ms/op
+WorkloadActual  11: 128 op, 703250818.00 ns, 5.4941 ms/op
+WorkloadActual  12: 128 op, 712338124.00 ns, 5.5651 ms/op
+WorkloadActual  13: 128 op, 703534323.00 ns, 5.4964 ms/op
+WorkloadActual  14: 128 op, 703233466.00 ns, 5.4940 ms/op
+WorkloadActual  15: 128 op, 710055321.00 ns, 5.5473 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 699531629.00 ns, 5.4651 ms/op
+WorkloadResult   2: 128 op, 702079205.00 ns, 5.4850 ms/op
+WorkloadResult   3: 128 op, 708409210.00 ns, 5.5344 ms/op
+WorkloadResult   4: 128 op, 697506524.00 ns, 5.4493 ms/op
+WorkloadResult   5: 128 op, 695668771.00 ns, 5.4349 ms/op
+WorkloadResult   6: 128 op, 707918352.00 ns, 5.5306 ms/op
+WorkloadResult   7: 128 op, 695443048.00 ns, 5.4331 ms/op
+WorkloadResult   8: 128 op, 697426018.00 ns, 5.4486 ms/op
+WorkloadResult   9: 128 op, 709651231.00 ns, 5.5442 ms/op
+WorkloadResult  10: 128 op, 696739623.00 ns, 5.4433 ms/op
+WorkloadResult  11: 128 op, 703250134.00 ns, 5.4941 ms/op
+WorkloadResult  12: 128 op, 712337440.00 ns, 5.5651 ms/op
+WorkloadResult  13: 128 op, 703533639.00 ns, 5.4964 ms/op
+WorkloadResult  14: 128 op, 703232782.00 ns, 5.4940 ms/op
+WorkloadResult  15: 128 op, 710054637.00 ns, 5.5473 ms/op
+GC:  0 0 0 513024 128
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 1)" --job "NetCoreApp21" --benchmarkId 3 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 306448.00 ns, 306.4480 us/op
+WorkloadJitting  1: 1 op, 28314488.00 ns, 28.3145 ms/op
+
+OverheadJitting  2: 16 op, 354741.00 ns, 22.1713 us/op
+WorkloadJitting  2: 16 op, 88121730.00 ns, 5.5076 ms/op
+
+WorkloadPilot    1: 16 op, 89283294.00 ns, 5.5802 ms/op
+WorkloadPilot    2: 32 op, 170690127.00 ns, 5.3341 ms/op
+WorkloadPilot    3: 64 op, 355149816.00 ns, 5.5492 ms/op
+WorkloadPilot    4: 128 op, 693989864.00 ns, 5.4218 ms/op
+
+OverheadWarmup   1: 128 op, 3129.00 ns, 24.4453 ns/op
+OverheadWarmup   2: 128 op, 774.00 ns, 6.0469 ns/op
+OverheadWarmup   3: 128 op, 731.00 ns, 5.7109 ns/op
+OverheadWarmup   4: 128 op, 677.00 ns, 5.2891 ns/op
+OverheadWarmup   5: 128 op, 771.00 ns, 6.0234 ns/op
+OverheadWarmup   6: 128 op, 669.00 ns, 5.2266 ns/op
+OverheadWarmup   7: 128 op, 685.00 ns, 5.3516 ns/op
+OverheadWarmup   8: 128 op, 668.00 ns, 5.2188 ns/op
+
+OverheadActual   1: 128 op, 870.00 ns, 6.7969 ns/op
+OverheadActual   2: 128 op, 903.00 ns, 7.0547 ns/op
+OverheadActual   3: 128 op, 946.00 ns, 7.3906 ns/op
+OverheadActual   4: 128 op, 891.00 ns, 6.9609 ns/op
+OverheadActual   5: 128 op, 664.00 ns, 5.1875 ns/op
+OverheadActual   6: 128 op, 654.00 ns, 5.1094 ns/op
+OverheadActual   7: 128 op, 727.00 ns, 5.6797 ns/op
+OverheadActual   8: 128 op, 668.00 ns, 5.2188 ns/op
+OverheadActual   9: 128 op, 643.00 ns, 5.0234 ns/op
+OverheadActual  10: 128 op, 665.00 ns, 5.1953 ns/op
+OverheadActual  11: 128 op, 650.00 ns, 5.0781 ns/op
+OverheadActual  12: 128 op, 672.00 ns, 5.2500 ns/op
+OverheadActual  13: 128 op, 652.00 ns, 5.0938 ns/op
+OverheadActual  14: 128 op, 667.00 ns, 5.2109 ns/op
+OverheadActual  15: 128 op, 662.00 ns, 5.1719 ns/op
+OverheadActual  16: 128 op, 660.00 ns, 5.1563 ns/op
+OverheadActual  17: 128 op, 506.00 ns, 3.9531 ns/op
+OverheadActual  18: 128 op, 669.00 ns, 5.2266 ns/op
+OverheadActual  19: 128 op, 658.00 ns, 5.1406 ns/op
+OverheadActual  20: 128 op, 778.00 ns, 6.0781 ns/op
+
+WorkloadWarmup   1: 128 op, 708088712.00 ns, 5.5319 ms/op
+WorkloadWarmup   2: 128 op, 693373595.00 ns, 5.4170 ms/op
+WorkloadWarmup   3: 128 op, 696594821.00 ns, 5.4421 ms/op
+WorkloadWarmup   4: 128 op, 715482838.00 ns, 5.5897 ms/op
+WorkloadWarmup   5: 128 op, 694568958.00 ns, 5.4263 ms/op
+WorkloadWarmup   6: 128 op, 699254286.00 ns, 5.4629 ms/op
+WorkloadWarmup   7: 128 op, 716031531.00 ns, 5.5940 ms/op
+WorkloadWarmup   8: 128 op, 698565790.00 ns, 5.4575 ms/op
+WorkloadWarmup   9: 128 op, 699663251.00 ns, 5.4661 ms/op
+WorkloadWarmup  10: 128 op, 711698964.00 ns, 5.5601 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 700723994.00 ns, 5.4744 ms/op
+WorkloadActual   2: 128 op, 696130331.00 ns, 5.4385 ms/op
+WorkloadActual   3: 128 op, 708790872.00 ns, 5.5374 ms/op
+WorkloadActual   4: 128 op, 700160498.00 ns, 5.4700 ms/op
+WorkloadActual   5: 128 op, 704620121.00 ns, 5.5048 ms/op
+WorkloadActual   6: 128 op, 705520639.00 ns, 5.5119 ms/op
+WorkloadActual   7: 128 op, 696962947.00 ns, 5.4450 ms/op
+WorkloadActual   8: 128 op, 694497431.00 ns, 5.4258 ms/op
+WorkloadActual   9: 128 op, 703603266.00 ns, 5.4969 ms/op
+WorkloadActual  10: 128 op, 711163408.00 ns, 5.5560 ms/op
+WorkloadActual  11: 128 op, 701153976.00 ns, 5.4778 ms/op
+WorkloadActual  12: 128 op, 699893227.00 ns, 5.4679 ms/op
+WorkloadActual  13: 128 op, 707895964.00 ns, 5.5304 ms/op
+WorkloadActual  14: 128 op, 697770128.00 ns, 5.4513 ms/op
+WorkloadActual  15: 128 op, 704852133.00 ns, 5.5067 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 700723328.00 ns, 5.4744 ms/op
+WorkloadResult   2: 128 op, 696129665.00 ns, 5.4385 ms/op
+WorkloadResult   3: 128 op, 708790206.00 ns, 5.5374 ms/op
+WorkloadResult   4: 128 op, 700159832.00 ns, 5.4700 ms/op
+WorkloadResult   5: 128 op, 704619455.00 ns, 5.5048 ms/op
+WorkloadResult   6: 128 op, 705519973.00 ns, 5.5119 ms/op
+WorkloadResult   7: 128 op, 696962281.00 ns, 5.4450 ms/op
+WorkloadResult   8: 128 op, 694496765.00 ns, 5.4258 ms/op
+WorkloadResult   9: 128 op, 703602600.00 ns, 5.4969 ms/op
+WorkloadResult  10: 128 op, 711162742.00 ns, 5.5560 ms/op
+WorkloadResult  11: 128 op, 701153310.00 ns, 5.4778 ms/op
+WorkloadResult  12: 128 op, 699892561.00 ns, 5.4679 ms/op
+WorkloadResult  13: 128 op, 707895298.00 ns, 5.5304 ms/op
+WorkloadResult  14: 128 op, 697769462.00 ns, 5.4513 ms/op
+WorkloadResult  15: 128 op, 704851467.00 ns, 5.5067 ms/op
+GC:  0 0 0 513024 128
+
+// AfterAll
+
+Mean = 5.4887 ms, StdErr = 0.0075 ms (0.14%); N = 30, StdDev = 0.0410 ms
+Min = 5.4258 ms, Q1 = 5.4493 ms, Median = 5.4895 ms, Q3 = 5.5304 ms, Max = 5.5651 ms
+IQR = 0.0812 ms, LowerFence = 5.3275 ms, UpperFence = 5.6522 ms
+ConfidenceInterval = [5.4613 ms; 5.5161 ms] (CI 99.9%), Margin = 0.0274 ms (0.50% of Mean)
+Skewness = 0.2, Kurtosis = 1.74, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 1)" --job "NetCoreApp21" --benchmarkId 4 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 310745.00 ns, 310.7450 us/op
+WorkloadJitting  1: 1 op, 27978502.00 ns, 27.9785 ms/op
+
+OverheadJitting  2: 16 op, 323819.00 ns, 20.2387 us/op
+WorkloadJitting  2: 16 op, 87908012.00 ns, 5.4943 ms/op
+
+WorkloadPilot    1: 16 op, 88701504.00 ns, 5.5438 ms/op
+WorkloadPilot    2: 32 op, 178628391.00 ns, 5.5821 ms/op
+WorkloadPilot    3: 64 op, 355854194.00 ns, 5.5602 ms/op
+WorkloadPilot    4: 128 op, 705869382.00 ns, 5.5146 ms/op
+
+OverheadWarmup   1: 128 op, 3308.00 ns, 25.8438 ns/op
+OverheadWarmup   2: 128 op, 747.00 ns, 5.8359 ns/op
+OverheadWarmup   3: 128 op, 745.00 ns, 5.8203 ns/op
+OverheadWarmup   4: 128 op, 592.00 ns, 4.6250 ns/op
+OverheadWarmup   5: 128 op, 663.00 ns, 5.1797 ns/op
+OverheadWarmup   6: 128 op, 673.00 ns, 5.2578 ns/op
+OverheadWarmup   7: 128 op, 672.00 ns, 5.2500 ns/op
+OverheadWarmup   8: 128 op, 587.00 ns, 4.5859 ns/op
+OverheadWarmup   9: 128 op, 672.00 ns, 5.2500 ns/op
+OverheadWarmup  10: 128 op, 635.00 ns, 4.9609 ns/op
+
+OverheadActual   1: 128 op, 693.00 ns, 5.4141 ns/op
+OverheadActual   2: 128 op, 745.00 ns, 5.8203 ns/op
+OverheadActual   3: 128 op, 702.00 ns, 5.4844 ns/op
+OverheadActual   4: 128 op, 824.00 ns, 6.4375 ns/op
+OverheadActual   5: 128 op, 922.00 ns, 7.2031 ns/op
+OverheadActual   6: 128 op, 935.00 ns, 7.3047 ns/op
+OverheadActual   7: 128 op, 868.00 ns, 6.7813 ns/op
+OverheadActual   8: 128 op, 659.00 ns, 5.1484 ns/op
+OverheadActual   9: 128 op, 1030.00 ns, 8.0469 ns/op
+OverheadActual  10: 128 op, 717.00 ns, 5.6016 ns/op
+OverheadActual  11: 128 op, 827.00 ns, 6.4609 ns/op
+OverheadActual  12: 128 op, 638.00 ns, 4.9844 ns/op
+OverheadActual  13: 128 op, 591.00 ns, 4.6172 ns/op
+OverheadActual  14: 128 op, 519.00 ns, 4.0547 ns/op
+OverheadActual  15: 128 op, 515.00 ns, 4.0234 ns/op
+OverheadActual  16: 128 op, 523.00 ns, 4.0859 ns/op
+OverheadActual  17: 128 op, 666.00 ns, 5.2031 ns/op
+OverheadActual  18: 128 op, 694.00 ns, 5.4219 ns/op
+OverheadActual  19: 128 op, 659.00 ns, 5.1484 ns/op
+OverheadActual  20: 128 op, 575.00 ns, 4.4922 ns/op
+
+WorkloadWarmup   1: 128 op, 702970376.00 ns, 5.4920 ms/op
+WorkloadWarmup   2: 128 op, 713086734.00 ns, 5.5710 ms/op
+WorkloadWarmup   3: 128 op, 705362866.00 ns, 5.5106 ms/op
+WorkloadWarmup   4: 128 op, 699286922.00 ns, 5.4632 ms/op
+WorkloadWarmup   5: 128 op, 713589625.00 ns, 5.5749 ms/op
+WorkloadWarmup   6: 128 op, 707229049.00 ns, 5.5252 ms/op
+WorkloadWarmup   7: 128 op, 702496882.00 ns, 5.4883 ms/op
+WorkloadWarmup   8: 128 op, 710839302.00 ns, 5.5534 ms/op
+WorkloadWarmup   9: 128 op, 694231939.00 ns, 5.4237 ms/op
+WorkloadWarmup  10: 128 op, 702769289.00 ns, 5.4904 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 714921381.00 ns, 5.5853 ms/op
+WorkloadActual   2: 128 op, 704985708.00 ns, 5.5077 ms/op
+WorkloadActual   3: 128 op, 705167116.00 ns, 5.5091 ms/op
+WorkloadActual   4: 128 op, 708562196.00 ns, 5.5356 ms/op
+WorkloadActual   5: 128 op, 704958290.00 ns, 5.5075 ms/op
+WorkloadActual   6: 128 op, 705310035.00 ns, 5.5102 ms/op
+WorkloadActual   7: 128 op, 710318322.00 ns, 5.5494 ms/op
+WorkloadActual   8: 128 op, 709332183.00 ns, 5.5417 ms/op
+WorkloadActual   9: 128 op, 708589355.00 ns, 5.5359 ms/op
+WorkloadActual  10: 128 op, 713166374.00 ns, 5.5716 ms/op
+WorkloadActual  11: 128 op, 722220609.00 ns, 5.6423 ms/op
+WorkloadActual  12: 128 op, 713888946.00 ns, 5.5773 ms/op
+WorkloadActual  13: 128 op, 705277817.00 ns, 5.5100 ms/op
+WorkloadActual  14: 128 op, 713293075.00 ns, 5.5726 ms/op
+WorkloadActual  15: 128 op, 704551536.00 ns, 5.5043 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 714920687.50 ns, 5.5853 ms/op
+WorkloadResult   2: 128 op, 704985014.50 ns, 5.5077 ms/op
+WorkloadResult   3: 128 op, 705166422.50 ns, 5.5091 ms/op
+WorkloadResult   4: 128 op, 708561502.50 ns, 5.5356 ms/op
+WorkloadResult   5: 128 op, 704957596.50 ns, 5.5075 ms/op
+WorkloadResult   6: 128 op, 705309341.50 ns, 5.5102 ms/op
+WorkloadResult   7: 128 op, 710317628.50 ns, 5.5494 ms/op
+WorkloadResult   8: 128 op, 709331489.50 ns, 5.5417 ms/op
+WorkloadResult   9: 128 op, 708588661.50 ns, 5.5358 ms/op
+WorkloadResult  10: 128 op, 713165680.50 ns, 5.5716 ms/op
+WorkloadResult  11: 128 op, 722219915.50 ns, 5.6423 ms/op
+WorkloadResult  12: 128 op, 713888252.50 ns, 5.5773 ms/op
+WorkloadResult  13: 128 op, 705277123.50 ns, 5.5100 ms/op
+WorkloadResult  14: 128 op, 713292381.50 ns, 5.5726 ms/op
+WorkloadResult  15: 128 op, 704550842.50 ns, 5.5043 ms/op
+GC:  0 0 0 527000 128
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 1)" --job "NetCoreApp21" --benchmarkId 4 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 308098.00 ns, 308.0980 us/op
+WorkloadJitting  1: 1 op, 31086511.00 ns, 31.0865 ms/op
+
+OverheadJitting  2: 16 op, 312557.00 ns, 19.5348 us/op
+WorkloadJitting  2: 16 op, 88958826.00 ns, 5.5599 ms/op
+
+WorkloadPilot    1: 16 op, 89308610.00 ns, 5.5818 ms/op
+WorkloadPilot    2: 32 op, 176756287.00 ns, 5.5236 ms/op
+WorkloadPilot    3: 64 op, 348847460.00 ns, 5.4507 ms/op
+WorkloadPilot    4: 128 op, 715966395.00 ns, 5.5935 ms/op
+
+OverheadWarmup   1: 128 op, 3327.00 ns, 25.9922 ns/op
+OverheadWarmup   2: 128 op, 823.00 ns, 6.4297 ns/op
+OverheadWarmup   3: 128 op, 724.00 ns, 5.6563 ns/op
+OverheadWarmup   4: 128 op, 583.00 ns, 4.5547 ns/op
+OverheadWarmup   5: 128 op, 728.00 ns, 5.6875 ns/op
+OverheadWarmup   6: 128 op, 707.00 ns, 5.5234 ns/op
+OverheadWarmup   7: 128 op, 605.00 ns, 4.7266 ns/op
+OverheadWarmup   8: 128 op, 714.00 ns, 5.5781 ns/op
+OverheadWarmup   9: 128 op, 629.00 ns, 4.9141 ns/op
+
+OverheadActual   1: 128 op, 648.00 ns, 5.0625 ns/op
+OverheadActual   2: 128 op, 834.00 ns, 6.5156 ns/op
+OverheadActual   3: 128 op, 662.00 ns, 5.1719 ns/op
+OverheadActual   4: 128 op, 825.00 ns, 6.4453 ns/op
+OverheadActual   5: 128 op, 645.00 ns, 5.0391 ns/op
+OverheadActual   6: 128 op, 547.00 ns, 4.2734 ns/op
+OverheadActual   7: 128 op, 651.00 ns, 5.0859 ns/op
+OverheadActual   8: 128 op, 563.00 ns, 4.3984 ns/op
+OverheadActual   9: 128 op, 512.00 ns, 4.0000 ns/op
+OverheadActual  10: 128 op, 513.00 ns, 4.0078 ns/op
+OverheadActual  11: 128 op, 552.00 ns, 4.3125 ns/op
+OverheadActual  12: 128 op, 639.00 ns, 4.9922 ns/op
+OverheadActual  13: 128 op, 648.00 ns, 5.0625 ns/op
+OverheadActual  14: 128 op, 652.00 ns, 5.0938 ns/op
+OverheadActual  15: 128 op, 585.00 ns, 4.5703 ns/op
+OverheadActual  16: 128 op, 645.00 ns, 5.0391 ns/op
+OverheadActual  17: 128 op, 591.00 ns, 4.6172 ns/op
+OverheadActual  18: 128 op, 618.00 ns, 4.8281 ns/op
+OverheadActual  19: 128 op, 634.00 ns, 4.9531 ns/op
+OverheadActual  20: 128 op, 641.00 ns, 5.0078 ns/op
+
+WorkloadWarmup   1: 128 op, 708331118.00 ns, 5.5338 ms/op
+WorkloadWarmup   2: 128 op, 709701349.00 ns, 5.5445 ms/op
+WorkloadWarmup   3: 128 op, 716552023.00 ns, 5.5981 ms/op
+WorkloadWarmup   4: 128 op, 700830776.00 ns, 5.4752 ms/op
+WorkloadWarmup   5: 128 op, 705544227.00 ns, 5.5121 ms/op
+WorkloadWarmup   6: 128 op, 713465723.00 ns, 5.5740 ms/op
+WorkloadWarmup   7: 128 op, 707046674.00 ns, 5.5238 ms/op
+WorkloadWarmup   8: 128 op, 703160150.00 ns, 5.4934 ms/op
+WorkloadWarmup   9: 128 op, 717200620.00 ns, 5.6031 ms/op
+WorkloadWarmup  10: 128 op, 707182807.00 ns, 5.5249 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 710700390.00 ns, 5.5523 ms/op
+WorkloadActual   2: 128 op, 711173702.00 ns, 5.5560 ms/op
+WorkloadActual   3: 128 op, 703236752.00 ns, 5.4940 ms/op
+WorkloadActual   4: 128 op, 703380759.00 ns, 5.4952 ms/op
+WorkloadActual   5: 128 op, 704464057.00 ns, 5.5036 ms/op
+WorkloadActual   6: 128 op, 709168686.00 ns, 5.5404 ms/op
+WorkloadActual   7: 128 op, 707966034.00 ns, 5.5310 ms/op
+WorkloadActual   8: 128 op, 709991624.00 ns, 5.5468 ms/op
+WorkloadActual   9: 128 op, 722297835.00 ns, 5.6430 ms/op
+WorkloadActual  10: 128 op, 709862082.00 ns, 5.5458 ms/op
+WorkloadActual  11: 128 op, 707769916.00 ns, 5.5295 ms/op
+WorkloadActual  12: 128 op, 717154535.00 ns, 5.6028 ms/op
+WorkloadActual  13: 128 op, 712055106.00 ns, 5.5629 ms/op
+WorkloadActual  14: 128 op, 711523048.00 ns, 5.5588 ms/op
+WorkloadActual  15: 128 op, 713704007.00 ns, 5.5758 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 710699750.00 ns, 5.5523 ms/op
+WorkloadResult   2: 128 op, 711173062.00 ns, 5.5560 ms/op
+WorkloadResult   3: 128 op, 703236112.00 ns, 5.4940 ms/op
+WorkloadResult   4: 128 op, 703380119.00 ns, 5.4952 ms/op
+WorkloadResult   5: 128 op, 704463417.00 ns, 5.5036 ms/op
+WorkloadResult   6: 128 op, 709168046.00 ns, 5.5404 ms/op
+WorkloadResult   7: 128 op, 707965394.00 ns, 5.5310 ms/op
+WorkloadResult   8: 128 op, 709990984.00 ns, 5.5468 ms/op
+WorkloadResult   9: 128 op, 709861442.00 ns, 5.5458 ms/op
+WorkloadResult  10: 128 op, 707769276.00 ns, 5.5294 ms/op
+WorkloadResult  11: 128 op, 717153895.00 ns, 5.6028 ms/op
+WorkloadResult  12: 128 op, 712054466.00 ns, 5.5629 ms/op
+WorkloadResult  13: 128 op, 711522408.00 ns, 5.5588 ms/op
+WorkloadResult  14: 128 op, 713703367.00 ns, 5.5758 ms/op
+GC:  0 0 0 527000 128
+
+// AfterAll
+
+Mean = 5.5433 ms, StdErr = 0.0065 ms (0.12%); N = 29, StdDev = 0.0349 ms
+Min = 5.4940 ms, Q1 = 5.5095 ms, Median = 5.5417 ms, Q3 = 5.5673 ms, Max = 5.6423 ms
+IQR = 0.0577 ms, LowerFence = 5.4230 ms, UpperFence = 5.6538 ms
+ConfidenceInterval = [5.5195 ms; 5.5671 ms] (CI 99.9%), Margin = 0.0238 ms (0.43% of Mean)
+Skewness = 0.67, Kurtosis = 3.23, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 1)" --job "NetCoreApp21" --benchmarkId 5 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 304206.00 ns, 304.2060 us/op
+WorkloadJitting  1: 1 op, 32277935.00 ns, 32.2779 ms/op
+
+OverheadJitting  2: 16 op, 264860.00 ns, 16.5538 us/op
+WorkloadJitting  2: 16 op, 90939118.00 ns, 5.6837 ms/op
+
+WorkloadPilot    1: 16 op, 82046943.00 ns, 5.1279 ms/op
+WorkloadPilot    2: 32 op, 178357544.00 ns, 5.5737 ms/op
+WorkloadPilot    3: 64 op, 358780531.00 ns, 5.6059 ms/op
+WorkloadPilot    4: 128 op, 707783064.00 ns, 5.5296 ms/op
+
+OverheadWarmup   1: 128 op, 3047.00 ns, 23.8047 ns/op
+OverheadWarmup   2: 128 op, 613.00 ns, 4.7891 ns/op
+OverheadWarmup   3: 128 op, 564.00 ns, 4.4063 ns/op
+OverheadWarmup   4: 128 op, 683.00 ns, 5.3359 ns/op
+OverheadWarmup   5: 128 op, 624.00 ns, 4.8750 ns/op
+OverheadWarmup   6: 128 op, 637.00 ns, 4.9766 ns/op
+OverheadWarmup   7: 128 op, 625.00 ns, 4.8828 ns/op
+
+OverheadActual   1: 128 op, 627.00 ns, 4.8984 ns/op
+OverheadActual   2: 128 op, 688.00 ns, 5.3750 ns/op
+OverheadActual   3: 128 op, 860.00 ns, 6.7188 ns/op
+OverheadActual   4: 128 op, 1339.00 ns, 10.4609 ns/op
+OverheadActual   5: 128 op, 612.00 ns, 4.7813 ns/op
+OverheadActual   6: 128 op, 567.00 ns, 4.4297 ns/op
+OverheadActual   7: 128 op, 846.00 ns, 6.6094 ns/op
+OverheadActual   8: 128 op, 653.00 ns, 5.1016 ns/op
+OverheadActual   9: 128 op, 644.00 ns, 5.0313 ns/op
+OverheadActual  10: 128 op, 643.00 ns, 5.0234 ns/op
+OverheadActual  11: 128 op, 603.00 ns, 4.7109 ns/op
+OverheadActual  12: 128 op, 628.00 ns, 4.9063 ns/op
+OverheadActual  13: 128 op, 637.00 ns, 4.9766 ns/op
+OverheadActual  14: 128 op, 616.00 ns, 4.8125 ns/op
+OverheadActual  15: 128 op, 512.00 ns, 4.0000 ns/op
+OverheadActual  16: 128 op, 494.00 ns, 3.8594 ns/op
+OverheadActual  17: 128 op, 544.00 ns, 4.2500 ns/op
+OverheadActual  18: 128 op, 681.00 ns, 5.3203 ns/op
+OverheadActual  19: 128 op, 553.00 ns, 4.3203 ns/op
+OverheadActual  20: 128 op, 621.00 ns, 4.8516 ns/op
+
+WorkloadWarmup   1: 128 op, 716055039.00 ns, 5.5942 ms/op
+WorkloadWarmup   2: 128 op, 701240662.00 ns, 5.4784 ms/op
+WorkloadWarmup   3: 128 op, 704799184.00 ns, 5.5062 ms/op
+WorkloadWarmup   4: 128 op, 699023462.00 ns, 5.4611 ms/op
+WorkloadWarmup   5: 128 op, 710758488.00 ns, 5.5528 ms/op
+WorkloadWarmup   6: 128 op, 705642270.00 ns, 5.5128 ms/op
+WorkloadWarmup   7: 128 op, 707032275.00 ns, 5.5237 ms/op
+WorkloadWarmup   8: 128 op, 716120538.00 ns, 5.5947 ms/op
+WorkloadWarmup   9: 128 op, 705218562.00 ns, 5.5095 ms/op
+WorkloadWarmup  10: 128 op, 704795645.00 ns, 5.5062 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 721666922.00 ns, 5.6380 ms/op
+WorkloadActual   2: 128 op, 710955366.00 ns, 5.5543 ms/op
+WorkloadActual   3: 128 op, 705207966.00 ns, 5.5094 ms/op
+WorkloadActual   4: 128 op, 717569620.00 ns, 5.6060 ms/op
+WorkloadActual   5: 128 op, 709532344.00 ns, 5.5432 ms/op
+WorkloadActual   6: 128 op, 701281004.00 ns, 5.4788 ms/op
+WorkloadActual   7: 128 op, 700134952.00 ns, 5.4698 ms/op
+WorkloadActual   8: 128 op, 705933283.00 ns, 5.5151 ms/op
+WorkloadActual   9: 128 op, 712480663.00 ns, 5.5663 ms/op
+WorkloadActual  10: 128 op, 713730950.00 ns, 5.5760 ms/op
+WorkloadActual  11: 128 op, 709744628.00 ns, 5.5449 ms/op
+WorkloadActual  12: 128 op, 701170304.00 ns, 5.4779 ms/op
+WorkloadActual  13: 128 op, 717855337.00 ns, 5.6082 ms/op
+WorkloadActual  14: 128 op, 709976784.00 ns, 5.5467 ms/op
+WorkloadActual  15: 128 op, 713571583.00 ns, 5.5748 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 721666294.50 ns, 5.6380 ms/op
+WorkloadResult   2: 128 op, 710954738.50 ns, 5.5543 ms/op
+WorkloadResult   3: 128 op, 705207338.50 ns, 5.5094 ms/op
+WorkloadResult   4: 128 op, 717568992.50 ns, 5.6060 ms/op
+WorkloadResult   5: 128 op, 709531716.50 ns, 5.5432 ms/op
+WorkloadResult   6: 128 op, 701280376.50 ns, 5.4788 ms/op
+WorkloadResult   7: 128 op, 700134324.50 ns, 5.4698 ms/op
+WorkloadResult   8: 128 op, 705932655.50 ns, 5.5151 ms/op
+WorkloadResult   9: 128 op, 712480035.50 ns, 5.5663 ms/op
+WorkloadResult  10: 128 op, 713730322.50 ns, 5.5760 ms/op
+WorkloadResult  11: 128 op, 709744000.50 ns, 5.5449 ms/op
+WorkloadResult  12: 128 op, 701169676.50 ns, 5.4779 ms/op
+WorkloadResult  13: 128 op, 717854709.50 ns, 5.6082 ms/op
+WorkloadResult  14: 128 op, 709976156.50 ns, 5.5467 ms/op
+WorkloadResult  15: 128 op, 713570955.50 ns, 5.5748 ms/op
+GC:  0 0 0 543480 128
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 1)" --job "NetCoreApp21" --benchmarkId 5 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 485684.00 ns, 485.6840 us/op
+WorkloadJitting  1: 1 op, 33849954.00 ns, 33.8500 ms/op
+
+WorkloadPilot    1: 2 op, 11219747.00 ns, 5.6099 ms/op
+WorkloadPilot    2: 3 op, 16529946.00 ns, 5.5100 ms/op
+WorkloadPilot    3: 4 op, 21594276.00 ns, 5.3986 ms/op
+WorkloadPilot    4: 5 op, 25835331.00 ns, 5.1671 ms/op
+WorkloadPilot    5: 6 op, 33041603.00 ns, 5.5069 ms/op
+WorkloadPilot    6: 7 op, 38241643.00 ns, 5.4631 ms/op
+WorkloadPilot    7: 8 op, 44087206.00 ns, 5.5109 ms/op
+WorkloadPilot    8: 9 op, 50265984.00 ns, 5.5851 ms/op
+WorkloadPilot    9: 10 op, 54784948.00 ns, 5.4785 ms/op
+WorkloadPilot   10: 11 op, 60923678.00 ns, 5.5385 ms/op
+WorkloadPilot   11: 12 op, 66826643.00 ns, 5.5689 ms/op
+WorkloadPilot   12: 13 op, 71163542.00 ns, 5.4741 ms/op
+WorkloadPilot   13: 14 op, 76836692.00 ns, 5.4883 ms/op
+WorkloadPilot   14: 15 op, 84411879.00 ns, 5.6275 ms/op
+WorkloadPilot   15: 16 op, 82190032.00 ns, 5.1369 ms/op
+WorkloadPilot   16: 32 op, 174582173.00 ns, 5.4557 ms/op
+WorkloadPilot   17: 64 op, 356148558.00 ns, 5.5648 ms/op
+WorkloadPilot   18: 128 op, 708095384.00 ns, 5.5320 ms/op
+
+WorkloadWarmup   1: 128 op, 721181848.00 ns, 5.6342 ms/op
+WorkloadWarmup   2: 128 op, 703654246.00 ns, 5.4973 ms/op
+WorkloadWarmup   3: 128 op, 704389725.00 ns, 5.5030 ms/op
+WorkloadWarmup   4: 128 op, 712967470.00 ns, 5.5701 ms/op
+WorkloadWarmup   5: 128 op, 705829541.00 ns, 5.5143 ms/op
+WorkloadWarmup   6: 128 op, 704744530.00 ns, 5.5058 ms/op
+WorkloadWarmup   7: 128 op, 713485050.00 ns, 5.5741 ms/op
+WorkloadWarmup   8: 128 op, 710073208.00 ns, 5.5474 ms/op
+WorkloadWarmup   9: 128 op, 710938877.00 ns, 5.5542 ms/op
+WorkloadWarmup  10: 128 op, 709817912.00 ns, 5.5455 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 128 op, 716360478.00 ns, 5.5966 ms/op
+WorkloadActual   2: 128 op, 710713513.00 ns, 5.5524 ms/op
+WorkloadActual   3: 128 op, 693582280.00 ns, 5.4186 ms/op
+WorkloadActual   4: 128 op, 713019042.00 ns, 5.5705 ms/op
+WorkloadActual   5: 128 op, 704554537.00 ns, 5.5043 ms/op
+WorkloadActual   6: 128 op, 708106224.00 ns, 5.5321 ms/op
+WorkloadActual   7: 128 op, 720117372.00 ns, 5.6259 ms/op
+WorkloadActual   8: 128 op, 711560555.00 ns, 5.5591 ms/op
+WorkloadActual   9: 128 op, 709392674.00 ns, 5.5421 ms/op
+WorkloadActual  10: 128 op, 719404145.00 ns, 5.6203 ms/op
+WorkloadActual  11: 128 op, 711858849.00 ns, 5.5614 ms/op
+WorkloadActual  12: 128 op, 704067779.00 ns, 5.5005 ms/op
+WorkloadActual  13: 128 op, 717393379.00 ns, 5.6046 ms/op
+WorkloadActual  14: 128 op, 708565050.00 ns, 5.5357 ms/op
+WorkloadActual  15: 128 op, 714289342.00 ns, 5.5804 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 128 op, 716360478.00 ns, 5.5966 ms/op
+WorkloadResult   2: 128 op, 710713513.00 ns, 5.5524 ms/op
+WorkloadResult   3: 128 op, 693582280.00 ns, 5.4186 ms/op
+WorkloadResult   4: 128 op, 713019042.00 ns, 5.5705 ms/op
+WorkloadResult   5: 128 op, 704554537.00 ns, 5.5043 ms/op
+WorkloadResult   6: 128 op, 708106224.00 ns, 5.5321 ms/op
+WorkloadResult   7: 128 op, 720117372.00 ns, 5.6259 ms/op
+WorkloadResult   8: 128 op, 711560555.00 ns, 5.5591 ms/op
+WorkloadResult   9: 128 op, 709392674.00 ns, 5.5421 ms/op
+WorkloadResult  10: 128 op, 719404145.00 ns, 5.6203 ms/op
+WorkloadResult  11: 128 op, 711858849.00 ns, 5.5614 ms/op
+WorkloadResult  12: 128 op, 704067779.00 ns, 5.5005 ms/op
+WorkloadResult  13: 128 op, 717393379.00 ns, 5.6046 ms/op
+WorkloadResult  14: 128 op, 708565050.00 ns, 5.5357 ms/op
+WorkloadResult  15: 128 op, 714289342.00 ns, 5.5804 ms/op
+GC:  0 0 0 543480 128
+
+// AfterAll
+
+Mean = 5.5505 ms, StdErr = 0.0093 ms (0.17%); N = 30, StdDev = 0.0510 ms
+Min = 5.4186 ms, Q1 = 5.5151 ms, Median = 5.5534 ms, Q3 = 5.5804 ms, Max = 5.6380 ms
+IQR = 0.0653 ms, LowerFence = 5.4172 ms, UpperFence = 5.6783 ms
+ConfidenceInterval = [5.5164 ms; 5.5845 ms] (CI 99.9%), Margin = 0.0340 ms (0.61% of Mean)
+Skewness = -0.45, Kurtosis = 2.79, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 15)" --job "NetCoreApp21" --benchmarkId 6 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 1336755.00 ns, 1.3368 ms/op
+WorkloadJitting  1: 1 op, 93628034.00 ns, 93.6280 ms/op
+
+WorkloadPilot    1: 2 op, 133977055.00 ns, 66.9885 ms/op
+WorkloadPilot    2: 3 op, 212181342.00 ns, 70.7271 ms/op
+WorkloadPilot    3: 4 op, 265968952.00 ns, 66.4922 ms/op
+WorkloadPilot    4: 5 op, 334365678.00 ns, 66.8731 ms/op
+WorkloadPilot    5: 6 op, 415923124.00 ns, 69.3205 ms/op
+WorkloadPilot    6: 7 op, 481087082.00 ns, 68.7267 ms/op
+WorkloadPilot    7: 8 op, 548481903.00 ns, 68.5602 ms/op
+
+WorkloadWarmup   1: 8 op, 539206776.00 ns, 67.4008 ms/op
+WorkloadWarmup   2: 8 op, 544844840.00 ns, 68.1056 ms/op
+WorkloadWarmup   3: 8 op, 536543912.00 ns, 67.0680 ms/op
+WorkloadWarmup   4: 8 op, 540240023.00 ns, 67.5300 ms/op
+WorkloadWarmup   5: 8 op, 540726254.00 ns, 67.5908 ms/op
+WorkloadWarmup   6: 8 op, 528781470.00 ns, 66.0977 ms/op
+WorkloadWarmup   7: 8 op, 545481588.00 ns, 68.1852 ms/op
+WorkloadWarmup   8: 8 op, 554300162.00 ns, 69.2875 ms/op
+WorkloadWarmup   9: 8 op, 543633324.00 ns, 67.9542 ms/op
+WorkloadWarmup  10: 8 op, 556849286.00 ns, 69.6062 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 8 op, 542697670.00 ns, 67.8372 ms/op
+WorkloadActual   2: 8 op, 556683873.00 ns, 69.5855 ms/op
+WorkloadActual   3: 8 op, 537882891.00 ns, 67.2354 ms/op
+WorkloadActual   4: 8 op, 556170460.00 ns, 69.5213 ms/op
+WorkloadActual   5: 8 op, 558065415.00 ns, 69.7582 ms/op
+WorkloadActual   6: 8 op, 531298384.00 ns, 66.4123 ms/op
+WorkloadActual   7: 8 op, 531636014.00 ns, 66.4545 ms/op
+WorkloadActual   8: 8 op, 561213588.00 ns, 70.1517 ms/op
+WorkloadActual   9: 8 op, 547100532.00 ns, 68.3876 ms/op
+WorkloadActual  10: 8 op, 559193050.00 ns, 69.8991 ms/op
+WorkloadActual  11: 8 op, 540560309.00 ns, 67.5700 ms/op
+WorkloadActual  12: 8 op, 553894517.00 ns, 69.2368 ms/op
+WorkloadActual  13: 8 op, 547205984.00 ns, 68.4007 ms/op
+WorkloadActual  14: 8 op, 548466554.00 ns, 68.5583 ms/op
+WorkloadActual  15: 8 op, 558325279.00 ns, 69.7907 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 8 op, 542697670.00 ns, 67.8372 ms/op
+WorkloadResult   2: 8 op, 556683873.00 ns, 69.5855 ms/op
+WorkloadResult   3: 8 op, 537882891.00 ns, 67.2354 ms/op
+WorkloadResult   4: 8 op, 556170460.00 ns, 69.5213 ms/op
+WorkloadResult   5: 8 op, 558065415.00 ns, 69.7582 ms/op
+WorkloadResult   6: 8 op, 531298384.00 ns, 66.4123 ms/op
+WorkloadResult   7: 8 op, 531636014.00 ns, 66.4545 ms/op
+WorkloadResult   8: 8 op, 561213588.00 ns, 70.1517 ms/op
+WorkloadResult   9: 8 op, 547100532.00 ns, 68.3876 ms/op
+WorkloadResult  10: 8 op, 559193050.00 ns, 69.8991 ms/op
+WorkloadResult  11: 8 op, 540560309.00 ns, 67.5700 ms/op
+WorkloadResult  12: 8 op, 553894517.00 ns, 69.2368 ms/op
+WorkloadResult  13: 8 op, 547205984.00 ns, 68.4007 ms/op
+WorkloadResult  14: 8 op, 548466554.00 ns, 68.5583 ms/op
+WorkloadResult  15: 8 op, 558325279.00 ns, 69.7907 ms/op
+GC:  0 0 0 32064 8
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 15)" --job "NetCoreApp21" --benchmarkId 6 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 279324.00 ns, 279.3240 us/op
+WorkloadJitting  1: 1 op, 99343394.00 ns, 99.3434 ms/op
+
+WorkloadPilot    1: 2 op, 137940515.00 ns, 68.9703 ms/op
+WorkloadPilot    2: 3 op, 206781203.00 ns, 68.9271 ms/op
+WorkloadPilot    3: 4 op, 269343400.00 ns, 67.3359 ms/op
+WorkloadPilot    4: 5 op, 348415511.00 ns, 69.6831 ms/op
+WorkloadPilot    5: 6 op, 404475684.00 ns, 67.4126 ms/op
+WorkloadPilot    6: 7 op, 465062511.00 ns, 66.4375 ms/op
+WorkloadPilot    7: 8 op, 547460587.00 ns, 68.4326 ms/op
+
+WorkloadWarmup   1: 8 op, 541512869.00 ns, 67.6891 ms/op
+WorkloadWarmup   2: 8 op, 552223885.00 ns, 69.0280 ms/op
+WorkloadWarmup   3: 8 op, 528141662.00 ns, 66.0177 ms/op
+WorkloadWarmup   4: 8 op, 540839057.00 ns, 67.6049 ms/op
+WorkloadWarmup   5: 8 op, 550852595.00 ns, 68.8566 ms/op
+WorkloadWarmup   6: 8 op, 549888863.00 ns, 68.7361 ms/op
+WorkloadWarmup   7: 8 op, 543457083.00 ns, 67.9321 ms/op
+WorkloadWarmup   8: 8 op, 542557942.00 ns, 67.8197 ms/op
+WorkloadWarmup   9: 8 op, 547884093.00 ns, 68.4855 ms/op
+WorkloadWarmup  10: 8 op, 536053443.00 ns, 67.0067 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 8 op, 541477176.00 ns, 67.6846 ms/op
+WorkloadActual   2: 8 op, 527279141.00 ns, 65.9099 ms/op
+WorkloadActual   3: 8 op, 538273476.00 ns, 67.2842 ms/op
+WorkloadActual   4: 8 op, 548833243.00 ns, 68.6042 ms/op
+WorkloadActual   5: 8 op, 562223365.00 ns, 70.2779 ms/op
+WorkloadActual   6: 8 op, 536203898.00 ns, 67.0255 ms/op
+WorkloadActual   7: 8 op, 560724001.00 ns, 70.0905 ms/op
+WorkloadActual   8: 8 op, 554515601.00 ns, 69.3145 ms/op
+WorkloadActual   9: 8 op, 561656484.00 ns, 70.2071 ms/op
+WorkloadActual  10: 8 op, 531560380.00 ns, 66.4450 ms/op
+WorkloadActual  11: 8 op, 533527555.00 ns, 66.6909 ms/op
+WorkloadActual  12: 8 op, 539823259.00 ns, 67.4779 ms/op
+WorkloadActual  13: 8 op, 554838265.00 ns, 69.3548 ms/op
+WorkloadActual  14: 8 op, 590390191.00 ns, 73.7988 ms/op
+WorkloadActual  15: 8 op, 589854186.00 ns, 73.7318 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 8 op, 541477176.00 ns, 67.6846 ms/op
+WorkloadResult   2: 8 op, 527279141.00 ns, 65.9099 ms/op
+WorkloadResult   3: 8 op, 538273476.00 ns, 67.2842 ms/op
+WorkloadResult   4: 8 op, 548833243.00 ns, 68.6042 ms/op
+WorkloadResult   5: 8 op, 562223365.00 ns, 70.2779 ms/op
+WorkloadResult   6: 8 op, 536203898.00 ns, 67.0255 ms/op
+WorkloadResult   7: 8 op, 560724001.00 ns, 70.0905 ms/op
+WorkloadResult   8: 8 op, 554515601.00 ns, 69.3145 ms/op
+WorkloadResult   9: 8 op, 561656484.00 ns, 70.2071 ms/op
+WorkloadResult  10: 8 op, 531560380.00 ns, 66.4450 ms/op
+WorkloadResult  11: 8 op, 533527555.00 ns, 66.6909 ms/op
+WorkloadResult  12: 8 op, 539823259.00 ns, 67.4779 ms/op
+WorkloadResult  13: 8 op, 554838265.00 ns, 69.3548 ms/op
+WorkloadResult  14: 8 op, 590390191.00 ns, 73.7988 ms/op
+WorkloadResult  15: 8 op, 589854186.00 ns, 73.7318 ms/op
+GC:  0 0 0 32064 8
+
+// AfterAll
+
+Mean = 68.7566 ms, StdErr = 0.3478 ms (0.51%); N = 30, StdDev = 1.9048 ms
+Min = 65.9099 ms, Q1 = 67.2842 ms, Median = 68.5812 ms, Q3 = 69.7907 ms, Max = 73.7988 ms
+IQR = 2.5065 ms, LowerFence = 63.5245 ms, UpperFence = 73.5504 ms
+ConfidenceInterval = [67.4839 ms; 70.0292 ms] (CI 99.9%), Margin = 1.2726 ms (1.85% of Mean)
+Skewness = 0.87, Kurtosis = 3.74, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 15)" --job "NetCoreApp21" --benchmarkId 7 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 289827.00 ns, 289.8270 us/op
+WorkloadJitting  1: 1 op, 98449189.00 ns, 98.4492 ms/op
+
+WorkloadPilot    1: 2 op, 138968599.00 ns, 69.4843 ms/op
+WorkloadPilot    2: 3 op, 211515819.00 ns, 70.5053 ms/op
+WorkloadPilot    3: 4 op, 308978284.00 ns, 77.2446 ms/op
+WorkloadPilot    4: 5 op, 379490578.00 ns, 75.8981 ms/op
+WorkloadPilot    5: 6 op, 451293211.00 ns, 75.2155 ms/op
+WorkloadPilot    6: 7 op, 533325357.00 ns, 76.1893 ms/op
+
+WorkloadWarmup   1: 7 op, 560123600.00 ns, 80.0177 ms/op
+WorkloadWarmup   2: 7 op, 529086051.00 ns, 75.5837 ms/op
+WorkloadWarmup   3: 7 op, 499994516.00 ns, 71.4278 ms/op
+WorkloadWarmup   4: 7 op, 503604645.00 ns, 71.9435 ms/op
+WorkloadWarmup   5: 7 op, 530040243.00 ns, 75.7200 ms/op
+WorkloadWarmup   6: 7 op, 517251326.00 ns, 73.8930 ms/op
+WorkloadWarmup   7: 7 op, 542499883.00 ns, 77.5000 ms/op
+WorkloadWarmup   8: 7 op, 506753030.00 ns, 72.3933 ms/op
+WorkloadWarmup   9: 7 op, 497937305.00 ns, 71.1339 ms/op
+WorkloadWarmup  10: 7 op, 528009972.00 ns, 75.4300 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 538648005.00 ns, 76.9497 ms/op
+WorkloadActual   2: 7 op, 519956412.00 ns, 74.2795 ms/op
+WorkloadActual   3: 7 op, 552446276.00 ns, 78.9209 ms/op
+WorkloadActual   4: 7 op, 517054076.00 ns, 73.8649 ms/op
+WorkloadActual   5: 7 op, 529788302.00 ns, 75.6840 ms/op
+WorkloadActual   6: 7 op, 544253444.00 ns, 77.7505 ms/op
+WorkloadActual   7: 7 op, 550015721.00 ns, 78.5737 ms/op
+WorkloadActual   8: 7 op, 531203772.00 ns, 75.8863 ms/op
+WorkloadActual   9: 7 op, 531501120.00 ns, 75.9287 ms/op
+WorkloadActual  10: 7 op, 550772776.00 ns, 78.6818 ms/op
+WorkloadActual  11: 7 op, 513885339.00 ns, 73.4122 ms/op
+WorkloadActual  12: 7 op, 529639649.00 ns, 75.6628 ms/op
+WorkloadActual  13: 7 op, 521444882.00 ns, 74.4921 ms/op
+WorkloadActual  14: 7 op, 519392315.00 ns, 74.1989 ms/op
+WorkloadActual  15: 7 op, 509794739.00 ns, 72.8278 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 538648005.00 ns, 76.9497 ms/op
+WorkloadResult   2: 7 op, 519956412.00 ns, 74.2795 ms/op
+WorkloadResult   3: 7 op, 552446276.00 ns, 78.9209 ms/op
+WorkloadResult   4: 7 op, 517054076.00 ns, 73.8649 ms/op
+WorkloadResult   5: 7 op, 529788302.00 ns, 75.6840 ms/op
+WorkloadResult   6: 7 op, 544253444.00 ns, 77.7505 ms/op
+WorkloadResult   7: 7 op, 550015721.00 ns, 78.5737 ms/op
+WorkloadResult   8: 7 op, 531203772.00 ns, 75.8863 ms/op
+WorkloadResult   9: 7 op, 531501120.00 ns, 75.9287 ms/op
+WorkloadResult  10: 7 op, 550772776.00 ns, 78.6818 ms/op
+WorkloadResult  11: 7 op, 513885339.00 ns, 73.4122 ms/op
+WorkloadResult  12: 7 op, 529639649.00 ns, 75.6628 ms/op
+WorkloadResult  13: 7 op, 521444882.00 ns, 74.4921 ms/op
+WorkloadResult  14: 7 op, 519392315.00 ns, 74.1989 ms/op
+WorkloadResult  15: 7 op, 509794739.00 ns, 72.8278 ms/op
+GC:  0 0 0 30416 7
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 15)" --job "NetCoreApp21" --benchmarkId 7 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 289442.00 ns, 289.4420 us/op
+WorkloadJitting  1: 1 op, 99587027.00 ns, 99.5870 ms/op
+
+WorkloadPilot    1: 2 op, 141831556.00 ns, 70.9158 ms/op
+WorkloadPilot    2: 3 op, 221489114.00 ns, 73.8297 ms/op
+WorkloadPilot    3: 4 op, 284148419.00 ns, 71.0371 ms/op
+WorkloadPilot    4: 5 op, 396950346.00 ns, 79.3901 ms/op
+WorkloadPilot    5: 6 op, 423591936.00 ns, 70.5987 ms/op
+WorkloadPilot    6: 7 op, 510156324.00 ns, 72.8795 ms/op
+
+WorkloadWarmup   1: 7 op, 536264830.00 ns, 76.6093 ms/op
+WorkloadWarmup   2: 7 op, 553633912.00 ns, 79.0906 ms/op
+WorkloadWarmup   3: 7 op, 521331858.00 ns, 74.4760 ms/op
+WorkloadWarmup   4: 7 op, 514500092.00 ns, 73.5000 ms/op
+WorkloadWarmup   5: 7 op, 515725490.00 ns, 73.6751 ms/op
+WorkloadWarmup   6: 7 op, 527488313.00 ns, 75.3555 ms/op
+WorkloadWarmup   7: 7 op, 530162954.00 ns, 75.7376 ms/op
+WorkloadWarmup   8: 7 op, 517122289.00 ns, 73.8746 ms/op
+WorkloadWarmup   9: 7 op, 542511285.00 ns, 77.5016 ms/op
+WorkloadWarmup  10: 7 op, 539378799.00 ns, 77.0541 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 509126581.00 ns, 72.7324 ms/op
+WorkloadActual   2: 7 op, 531781209.00 ns, 75.9687 ms/op
+WorkloadActual   3: 7 op, 543682581.00 ns, 77.6689 ms/op
+WorkloadActual   4: 7 op, 533336665.00 ns, 76.1910 ms/op
+WorkloadActual   5: 7 op, 525901503.00 ns, 75.1288 ms/op
+WorkloadActual   6: 7 op, 535487203.00 ns, 76.4982 ms/op
+WorkloadActual   7: 7 op, 529558279.00 ns, 75.6512 ms/op
+WorkloadActual   8: 7 op, 536309750.00 ns, 76.6157 ms/op
+WorkloadActual   9: 7 op, 519975873.00 ns, 74.2823 ms/op
+WorkloadActual  10: 7 op, 516128534.00 ns, 73.7326 ms/op
+WorkloadActual  11: 7 op, 521022189.00 ns, 74.4317 ms/op
+WorkloadActual  12: 7 op, 522228072.00 ns, 74.6040 ms/op
+WorkloadActual  13: 7 op, 546632485.00 ns, 78.0904 ms/op
+WorkloadActual  14: 7 op, 552110974.00 ns, 78.8730 ms/op
+WorkloadActual  15: 7 op, 535173815.00 ns, 76.4534 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 509126581.00 ns, 72.7324 ms/op
+WorkloadResult   2: 7 op, 531781209.00 ns, 75.9687 ms/op
+WorkloadResult   3: 7 op, 543682581.00 ns, 77.6689 ms/op
+WorkloadResult   4: 7 op, 533336665.00 ns, 76.1910 ms/op
+WorkloadResult   5: 7 op, 525901503.00 ns, 75.1288 ms/op
+WorkloadResult   6: 7 op, 535487203.00 ns, 76.4982 ms/op
+WorkloadResult   7: 7 op, 529558279.00 ns, 75.6512 ms/op
+WorkloadResult   8: 7 op, 536309750.00 ns, 76.6157 ms/op
+WorkloadResult   9: 7 op, 519975873.00 ns, 74.2823 ms/op
+WorkloadResult  10: 7 op, 516128534.00 ns, 73.7326 ms/op
+WorkloadResult  11: 7 op, 521022189.00 ns, 74.4317 ms/op
+WorkloadResult  12: 7 op, 522228072.00 ns, 74.6040 ms/op
+WorkloadResult  13: 7 op, 546632485.00 ns, 78.0904 ms/op
+WorkloadResult  14: 7 op, 552110974.00 ns, 78.8730 ms/op
+WorkloadResult  15: 7 op, 535173815.00 ns, 76.4534 ms/op
+GC:  0 0 0 30416 7
+
+// AfterAll
+
+Mean = 75.8012 ms, StdErr = 0.3313 ms (0.44%); N = 30, StdDev = 1.8146 ms
+Min = 72.7324 ms, Q1 = 74.2823 ms, Median = 75.7851 ms, Q3 = 76.9497 ms, Max = 78.9209 ms
+IQR = 2.6674 ms, LowerFence = 70.2811 ms, UpperFence = 80.9509 ms
+ConfidenceInterval = [74.5888 ms; 77.0136 ms] (CI 99.9%), Margin = 1.2124 ms (1.60% of Mean)
+Skewness = 0.17, Kurtosis = 1.92, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 15)" --job "NetCoreApp21" --benchmarkId 8 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 1723354.00 ns, 1.7234 ms/op
+WorkloadJitting  1: 1 op, 99752091.00 ns, 99.7521 ms/op
+
+WorkloadPilot    1: 2 op, 153681663.00 ns, 76.8408 ms/op
+WorkloadPilot    2: 3 op, 241671285.00 ns, 80.5571 ms/op
+WorkloadPilot    3: 4 op, 311229859.00 ns, 77.8075 ms/op
+WorkloadPilot    4: 5 op, 382348403.00 ns, 76.4697 ms/op
+WorkloadPilot    5: 6 op, 440277588.00 ns, 73.3796 ms/op
+WorkloadPilot    6: 7 op, 528962806.00 ns, 75.5661 ms/op
+
+WorkloadWarmup   1: 7 op, 513680004.00 ns, 73.3829 ms/op
+WorkloadWarmup   2: 7 op, 536227959.00 ns, 76.6040 ms/op
+WorkloadWarmup   3: 7 op, 505445516.00 ns, 72.2065 ms/op
+WorkloadWarmup   4: 7 op, 555572927.00 ns, 79.3676 ms/op
+WorkloadWarmup   5: 7 op, 513228586.00 ns, 73.3184 ms/op
+WorkloadWarmup   6: 7 op, 528366596.00 ns, 75.4809 ms/op
+WorkloadWarmup   7: 7 op, 498474479.00 ns, 71.2106 ms/op
+WorkloadWarmup   8: 7 op, 546443471.00 ns, 78.0634 ms/op
+WorkloadWarmup   9: 7 op, 560965895.00 ns, 80.1380 ms/op
+WorkloadWarmup  10: 7 op, 550340844.00 ns, 78.6201 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 556588117.00 ns, 79.5126 ms/op
+WorkloadActual   2: 7 op, 518136475.00 ns, 74.0195 ms/op
+WorkloadActual   3: 7 op, 518736570.00 ns, 74.1052 ms/op
+WorkloadActual   4: 7 op, 537292443.00 ns, 76.7561 ms/op
+WorkloadActual   5: 7 op, 542683682.00 ns, 77.5262 ms/op
+WorkloadActual   6: 7 op, 528052601.00 ns, 75.4361 ms/op
+WorkloadActual   7: 7 op, 539006545.00 ns, 77.0009 ms/op
+WorkloadActual   8: 7 op, 508631669.00 ns, 72.6617 ms/op
+WorkloadActual   9: 7 op, 500758912.00 ns, 71.5370 ms/op
+WorkloadActual  10: 7 op, 516615059.00 ns, 73.8022 ms/op
+WorkloadActual  11: 7 op, 527053656.00 ns, 75.2934 ms/op
+WorkloadActual  12: 7 op, 519677661.00 ns, 74.2397 ms/op
+WorkloadActual  13: 7 op, 531686602.00 ns, 75.9552 ms/op
+WorkloadActual  14: 7 op, 534822933.00 ns, 76.4033 ms/op
+WorkloadActual  15: 7 op, 557568137.00 ns, 79.6526 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 556588117.00 ns, 79.5126 ms/op
+WorkloadResult   2: 7 op, 518136475.00 ns, 74.0195 ms/op
+WorkloadResult   3: 7 op, 518736570.00 ns, 74.1052 ms/op
+WorkloadResult   4: 7 op, 537292443.00 ns, 76.7561 ms/op
+WorkloadResult   5: 7 op, 542683682.00 ns, 77.5262 ms/op
+WorkloadResult   6: 7 op, 528052601.00 ns, 75.4361 ms/op
+WorkloadResult   7: 7 op, 539006545.00 ns, 77.0009 ms/op
+WorkloadResult   8: 7 op, 508631669.00 ns, 72.6617 ms/op
+WorkloadResult   9: 7 op, 500758912.00 ns, 71.5370 ms/op
+WorkloadResult  10: 7 op, 516615059.00 ns, 73.8022 ms/op
+WorkloadResult  11: 7 op, 527053656.00 ns, 75.2934 ms/op
+WorkloadResult  12: 7 op, 519677661.00 ns, 74.2397 ms/op
+WorkloadResult  13: 7 op, 531686602.00 ns, 75.9552 ms/op
+WorkloadResult  14: 7 op, 534822933.00 ns, 76.4033 ms/op
+WorkloadResult  15: 7 op, 557568137.00 ns, 79.6526 ms/op
+GC:  0 0 0 31408 7
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 15)" --job "NetCoreApp21" --benchmarkId 8 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 275252.00 ns, 275.2520 us/op
+WorkloadJitting  1: 1 op, 108851400.00 ns, 108.8514 ms/op
+
+WorkloadPilot    1: 2 op, 144044836.00 ns, 72.0224 ms/op
+WorkloadPilot    2: 3 op, 216435796.00 ns, 72.1453 ms/op
+WorkloadPilot    3: 4 op, 304088978.00 ns, 76.0222 ms/op
+WorkloadPilot    4: 5 op, 389829762.00 ns, 77.9660 ms/op
+WorkloadPilot    5: 6 op, 457290381.00 ns, 76.2151 ms/op
+WorkloadPilot    6: 7 op, 533612288.00 ns, 76.2303 ms/op
+
+WorkloadWarmup   1: 7 op, 539380221.00 ns, 77.0543 ms/op
+WorkloadWarmup   2: 7 op, 532370621.00 ns, 76.0529 ms/op
+WorkloadWarmup   3: 7 op, 510919213.00 ns, 72.9885 ms/op
+WorkloadWarmup   4: 7 op, 532534346.00 ns, 76.0763 ms/op
+WorkloadWarmup   5: 7 op, 548285120.00 ns, 78.3264 ms/op
+WorkloadWarmup   6: 7 op, 511642262.00 ns, 73.0918 ms/op
+WorkloadWarmup   7: 7 op, 521789680.00 ns, 74.5414 ms/op
+WorkloadWarmup   8: 7 op, 534305297.00 ns, 76.3293 ms/op
+WorkloadWarmup   9: 7 op, 509663758.00 ns, 72.8091 ms/op
+WorkloadWarmup  10: 7 op, 534480693.00 ns, 76.3544 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 7 op, 517696288.00 ns, 73.9566 ms/op
+WorkloadActual   2: 7 op, 517861249.00 ns, 73.9802 ms/op
+WorkloadActual   3: 7 op, 501135159.00 ns, 71.5907 ms/op
+WorkloadActual   4: 7 op, 533118477.00 ns, 76.1598 ms/op
+WorkloadActual   5: 7 op, 521967288.00 ns, 74.5668 ms/op
+WorkloadActual   6: 7 op, 511203066.00 ns, 73.0290 ms/op
+WorkloadActual   7: 7 op, 522314584.00 ns, 74.6164 ms/op
+WorkloadActual   8: 7 op, 525891516.00 ns, 75.1274 ms/op
+WorkloadActual   9: 7 op, 503390510.00 ns, 71.9129 ms/op
+WorkloadActual  10: 7 op, 522937933.00 ns, 74.7054 ms/op
+WorkloadActual  11: 7 op, 527057614.00 ns, 75.2939 ms/op
+WorkloadActual  12: 7 op, 512540373.00 ns, 73.2201 ms/op
+WorkloadActual  13: 7 op, 543204335.00 ns, 77.6006 ms/op
+WorkloadActual  14: 7 op, 511466952.00 ns, 73.0667 ms/op
+WorkloadActual  15: 7 op, 515758008.00 ns, 73.6797 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 7 op, 517696288.00 ns, 73.9566 ms/op
+WorkloadResult   2: 7 op, 517861249.00 ns, 73.9802 ms/op
+WorkloadResult   3: 7 op, 501135159.00 ns, 71.5907 ms/op
+WorkloadResult   4: 7 op, 533118477.00 ns, 76.1598 ms/op
+WorkloadResult   5: 7 op, 521967288.00 ns, 74.5668 ms/op
+WorkloadResult   6: 7 op, 511203066.00 ns, 73.0290 ms/op
+WorkloadResult   7: 7 op, 522314584.00 ns, 74.6164 ms/op
+WorkloadResult   8: 7 op, 525891516.00 ns, 75.1274 ms/op
+WorkloadResult   9: 7 op, 503390510.00 ns, 71.9129 ms/op
+WorkloadResult  10: 7 op, 522937933.00 ns, 74.7054 ms/op
+WorkloadResult  11: 7 op, 527057614.00 ns, 75.2939 ms/op
+WorkloadResult  12: 7 op, 512540373.00 ns, 73.2201 ms/op
+WorkloadResult  13: 7 op, 543204335.00 ns, 77.6006 ms/op
+WorkloadResult  14: 7 op, 511466952.00 ns, 73.0667 ms/op
+WorkloadResult  15: 7 op, 515758008.00 ns, 73.6797 ms/op
+GC:  0 0 0 31408 7
+
+// AfterAll
+
+Mean = 74.8803 ms, StdErr = 0.3774 ms (0.50%); N = 30, StdDev = 2.0669 ms
+Min = 71.5370 ms, Q1 = 73.6797 ms, Median = 74.5916 ms, Q3 = 76.1598 ms, Max = 79.6526 ms
+IQR = 2.4801 ms, LowerFence = 69.9596 ms, UpperFence = 79.8799 ms
+ConfidenceInterval = [73.4993 ms; 76.2612 ms] (CI 99.9%), Margin = 1.3809 ms (1.84% of Mean)
+Skewness = 0.52, Kurtosis = 2.75, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 100)" --job "NetCoreApp21" --benchmarkId 9 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 282699.00 ns, 282.6990 us/op
+WorkloadJitting  1: 1 op, 444379617.00 ns, 444.3796 ms/op
+
+WorkloadWarmup   1: 1 op, 405580011.00 ns, 405.5800 ms/op
+WorkloadWarmup   2: 1 op, 413598269.00 ns, 413.5983 ms/op
+WorkloadWarmup   3: 1 op, 407320519.00 ns, 407.3205 ms/op
+WorkloadWarmup   4: 1 op, 414581938.00 ns, 414.5819 ms/op
+WorkloadWarmup   5: 1 op, 418601140.00 ns, 418.6011 ms/op
+WorkloadWarmup   6: 1 op, 413803109.00 ns, 413.8031 ms/op
+WorkloadWarmup   7: 1 op, 427150383.00 ns, 427.1504 ms/op
+WorkloadWarmup   8: 1 op, 417823128.00 ns, 417.8231 ms/op
+WorkloadWarmup   9: 1 op, 419494019.00 ns, 419.4940 ms/op
+WorkloadWarmup  10: 1 op, 411490786.00 ns, 411.4908 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 413077949.00 ns, 413.0779 ms/op
+WorkloadActual   2: 1 op, 417975493.00 ns, 417.9755 ms/op
+WorkloadActual   3: 1 op, 408643126.00 ns, 408.6431 ms/op
+WorkloadActual   4: 1 op, 410981665.00 ns, 410.9817 ms/op
+WorkloadActual   5: 1 op, 412740433.00 ns, 412.7404 ms/op
+WorkloadActual   6: 1 op, 404407378.00 ns, 404.4074 ms/op
+WorkloadActual   7: 1 op, 400945904.00 ns, 400.9459 ms/op
+WorkloadActual   8: 1 op, 403882981.00 ns, 403.8830 ms/op
+WorkloadActual   9: 1 op, 408293892.00 ns, 408.2939 ms/op
+WorkloadActual  10: 1 op, 406819535.00 ns, 406.8195 ms/op
+WorkloadActual  11: 1 op, 402136506.00 ns, 402.1365 ms/op
+WorkloadActual  12: 1 op, 402070262.00 ns, 402.0703 ms/op
+WorkloadActual  13: 1 op, 404850998.00 ns, 404.8510 ms/op
+WorkloadActual  14: 1 op, 403340586.00 ns, 403.3406 ms/op
+WorkloadActual  15: 1 op, 405895594.00 ns, 405.8956 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 413077949.00 ns, 413.0779 ms/op
+WorkloadResult   2: 1 op, 417975493.00 ns, 417.9755 ms/op
+WorkloadResult   3: 1 op, 408643126.00 ns, 408.6431 ms/op
+WorkloadResult   4: 1 op, 410981665.00 ns, 410.9817 ms/op
+WorkloadResult   5: 1 op, 412740433.00 ns, 412.7404 ms/op
+WorkloadResult   6: 1 op, 404407378.00 ns, 404.4074 ms/op
+WorkloadResult   7: 1 op, 400945904.00 ns, 400.9459 ms/op
+WorkloadResult   8: 1 op, 403882981.00 ns, 403.8830 ms/op
+WorkloadResult   9: 1 op, 408293892.00 ns, 408.2939 ms/op
+WorkloadResult  10: 1 op, 406819535.00 ns, 406.8195 ms/op
+WorkloadResult  11: 1 op, 402136506.00 ns, 402.1365 ms/op
+WorkloadResult  12: 1 op, 402070262.00 ns, 402.0703 ms/op
+WorkloadResult  13: 1 op, 404850998.00 ns, 404.8510 ms/op
+WorkloadResult  14: 1 op, 403340586.00 ns, 403.3406 ms/op
+WorkloadResult  15: 1 op, 405895594.00 ns, 405.8956 ms/op
+GC:  0 0 0 4008 1
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.RunPublic(sleepTime: 100)" --job "NetCoreApp21" --benchmarkId 9 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 280525.00 ns, 280.5250 us/op
+WorkloadJitting  1: 1 op, 430677243.00 ns, 430.6772 ms/op
+
+WorkloadWarmup   1: 1 op, 400773399.00 ns, 400.7734 ms/op
+WorkloadWarmup   2: 1 op, 400821123.00 ns, 400.8211 ms/op
+WorkloadWarmup   3: 1 op, 401805738.00 ns, 401.8057 ms/op
+WorkloadWarmup   4: 1 op, 408086276.00 ns, 408.0863 ms/op
+WorkloadWarmup   5: 1 op, 405684019.00 ns, 405.6840 ms/op
+WorkloadWarmup   6: 1 op, 400948481.00 ns, 400.9485 ms/op
+WorkloadWarmup   7: 1 op, 400843514.00 ns, 400.8435 ms/op
+WorkloadWarmup   8: 1 op, 400788825.00 ns, 400.7888 ms/op
+WorkloadWarmup   9: 1 op, 403407833.00 ns, 403.4078 ms/op
+WorkloadWarmup  10: 1 op, 407976358.00 ns, 407.9764 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 404436865.00 ns, 404.4369 ms/op
+WorkloadActual   2: 1 op, 402245636.00 ns, 402.2456 ms/op
+WorkloadActual   3: 1 op, 403799833.00 ns, 403.7998 ms/op
+WorkloadActual   4: 1 op, 404998758.00 ns, 404.9988 ms/op
+WorkloadActual   5: 1 op, 403751838.00 ns, 403.7518 ms/op
+WorkloadActual   6: 1 op, 404184241.00 ns, 404.1842 ms/op
+WorkloadActual   7: 1 op, 401232616.00 ns, 401.2326 ms/op
+WorkloadActual   8: 1 op, 404388332.00 ns, 404.3883 ms/op
+WorkloadActual   9: 1 op, 404956285.00 ns, 404.9563 ms/op
+WorkloadActual  10: 1 op, 404488266.00 ns, 404.4883 ms/op
+WorkloadActual  11: 1 op, 401799960.00 ns, 401.8000 ms/op
+WorkloadActual  12: 1 op, 402561535.00 ns, 402.5615 ms/op
+WorkloadActual  13: 1 op, 407520779.00 ns, 407.5208 ms/op
+WorkloadActual  14: 1 op, 401715101.00 ns, 401.7151 ms/op
+WorkloadActual  15: 1 op, 409297264.00 ns, 409.2973 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 404436865.00 ns, 404.4369 ms/op
+WorkloadResult   2: 1 op, 402245636.00 ns, 402.2456 ms/op
+WorkloadResult   3: 1 op, 403799833.00 ns, 403.7998 ms/op
+WorkloadResult   4: 1 op, 404998758.00 ns, 404.9988 ms/op
+WorkloadResult   5: 1 op, 403751838.00 ns, 403.7518 ms/op
+WorkloadResult   6: 1 op, 404184241.00 ns, 404.1842 ms/op
+WorkloadResult   7: 1 op, 401232616.00 ns, 401.2326 ms/op
+WorkloadResult   8: 1 op, 404388332.00 ns, 404.3883 ms/op
+WorkloadResult   9: 1 op, 404956285.00 ns, 404.9563 ms/op
+WorkloadResult  10: 1 op, 404488266.00 ns, 404.4883 ms/op
+WorkloadResult  11: 1 op, 401799960.00 ns, 401.8000 ms/op
+WorkloadResult  12: 1 op, 402561535.00 ns, 402.5615 ms/op
+WorkloadResult  13: 1 op, 407520779.00 ns, 407.5208 ms/op
+WorkloadResult  14: 1 op, 401715101.00 ns, 401.7151 ms/op
+GC:  0 0 0 4008 1
+
+// AfterAll
+
+Mean = 405.4532 ms, StdErr = 0.7435 ms (0.18%); N = 29, StdDev = 4.0041 ms
+Min = 400.9459 ms, Q1 = 402.4036 ms, Median = 404.4074 ms, Q3 = 407.1702 ms, Max = 417.9755 ms
+IQR = 4.7666 ms, LowerFence = 395.2537 ms, UpperFence = 414.3200 ms
+ConfidenceInterval = [402.7215 ms; 408.1849 ms] (CI 99.9%), Margin = 2.7317 ms (0.67% of Mean)
+Skewness = 1.4, Kurtosis = 4.49, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 100)" --job "NetCoreApp21" --benchmarkId 10 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 678985.00 ns, 678.9850 us/op
+WorkloadJitting  1: 1 op, 430318627.00 ns, 430.3186 ms/op
+
+WorkloadWarmup   1: 1 op, 402090604.00 ns, 402.0906 ms/op
+WorkloadWarmup   2: 1 op, 403495550.00 ns, 403.4956 ms/op
+WorkloadWarmup   3: 1 op, 401912358.00 ns, 401.9124 ms/op
+WorkloadWarmup   4: 1 op, 406675111.00 ns, 406.6751 ms/op
+WorkloadWarmup   5: 1 op, 403584004.00 ns, 403.5840 ms/op
+WorkloadWarmup   6: 1 op, 402598664.00 ns, 402.5987 ms/op
+WorkloadWarmup   7: 1 op, 403876231.00 ns, 403.8762 ms/op
+WorkloadWarmup   8: 1 op, 404290379.00 ns, 404.2904 ms/op
+WorkloadWarmup   9: 1 op, 403354507.00 ns, 403.3545 ms/op
+WorkloadWarmup  10: 1 op, 404733533.00 ns, 404.7335 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 401974318.00 ns, 401.9743 ms/op
+WorkloadActual   2: 1 op, 403254471.00 ns, 403.2545 ms/op
+WorkloadActual   3: 1 op, 401820961.00 ns, 401.8210 ms/op
+WorkloadActual   4: 1 op, 407956563.00 ns, 407.9566 ms/op
+WorkloadActual   5: 1 op, 401714701.00 ns, 401.7147 ms/op
+WorkloadActual   6: 1 op, 402554205.00 ns, 402.5542 ms/op
+WorkloadActual   7: 1 op, 406615424.00 ns, 406.6154 ms/op
+WorkloadActual   8: 1 op, 400868028.00 ns, 400.8680 ms/op
+WorkloadActual   9: 1 op, 406069852.00 ns, 406.0699 ms/op
+WorkloadActual  10: 1 op, 400840289.00 ns, 400.8403 ms/op
+WorkloadActual  11: 1 op, 400938565.00 ns, 400.9386 ms/op
+WorkloadActual  12: 1 op, 407140142.00 ns, 407.1401 ms/op
+WorkloadActual  13: 1 op, 411802353.00 ns, 411.8024 ms/op
+WorkloadActual  14: 1 op, 409060872.00 ns, 409.0609 ms/op
+WorkloadActual  15: 1 op, 413215409.00 ns, 413.2154 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 401974318.00 ns, 401.9743 ms/op
+WorkloadResult   2: 1 op, 403254471.00 ns, 403.2545 ms/op
+WorkloadResult   3: 1 op, 401820961.00 ns, 401.8210 ms/op
+WorkloadResult   4: 1 op, 407956563.00 ns, 407.9566 ms/op
+WorkloadResult   5: 1 op, 401714701.00 ns, 401.7147 ms/op
+WorkloadResult   6: 1 op, 402554205.00 ns, 402.5542 ms/op
+WorkloadResult   7: 1 op, 406615424.00 ns, 406.6154 ms/op
+WorkloadResult   8: 1 op, 400868028.00 ns, 400.8680 ms/op
+WorkloadResult   9: 1 op, 406069852.00 ns, 406.0699 ms/op
+WorkloadResult  10: 1 op, 400840289.00 ns, 400.8403 ms/op
+WorkloadResult  11: 1 op, 400938565.00 ns, 400.9386 ms/op
+WorkloadResult  12: 1 op, 407140142.00 ns, 407.1401 ms/op
+WorkloadResult  13: 1 op, 411802353.00 ns, 411.8024 ms/op
+WorkloadResult  14: 1 op, 409060872.00 ns, 409.0609 ms/op
+WorkloadResult  15: 1 op, 413215409.00 ns, 413.2154 ms/op
+GC:  0 0 0 5792 1
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.Reflect(sleepTime: 100)" --job "NetCoreApp21" --benchmarkId 10 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 280680.00 ns, 280.6800 us/op
+WorkloadJitting  1: 1 op, 434249509.00 ns, 434.2495 ms/op
+
+WorkloadWarmup   1: 1 op, 411363790.00 ns, 411.3638 ms/op
+WorkloadWarmup   2: 1 op, 403538533.00 ns, 403.5385 ms/op
+WorkloadWarmup   3: 1 op, 404251914.00 ns, 404.2519 ms/op
+WorkloadWarmup   4: 1 op, 406668617.00 ns, 406.6686 ms/op
+WorkloadWarmup   5: 1 op, 408635437.00 ns, 408.6354 ms/op
+WorkloadWarmup   6: 1 op, 405920266.00 ns, 405.9203 ms/op
+WorkloadWarmup   7: 1 op, 401912652.00 ns, 401.9127 ms/op
+WorkloadWarmup   8: 1 op, 407727974.00 ns, 407.7280 ms/op
+WorkloadWarmup   9: 1 op, 405344341.00 ns, 405.3443 ms/op
+WorkloadWarmup  10: 1 op, 415657352.00 ns, 415.6574 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 407797312.00 ns, 407.7973 ms/op
+WorkloadActual   2: 1 op, 403519564.00 ns, 403.5196 ms/op
+WorkloadActual   3: 1 op, 409832344.00 ns, 409.8323 ms/op
+WorkloadActual   4: 1 op, 411644725.00 ns, 411.6447 ms/op
+WorkloadActual   5: 1 op, 413477517.00 ns, 413.4775 ms/op
+WorkloadActual   6: 1 op, 415615773.00 ns, 415.6158 ms/op
+WorkloadActual   7: 1 op, 402454353.00 ns, 402.4544 ms/op
+WorkloadActual   8: 1 op, 405125478.00 ns, 405.1255 ms/op
+WorkloadActual   9: 1 op, 411184523.00 ns, 411.1845 ms/op
+WorkloadActual  10: 1 op, 405661757.00 ns, 405.6618 ms/op
+WorkloadActual  11: 1 op, 404187218.00 ns, 404.1872 ms/op
+WorkloadActual  12: 1 op, 405752554.00 ns, 405.7526 ms/op
+WorkloadActual  13: 1 op, 403015162.00 ns, 403.0152 ms/op
+WorkloadActual  14: 1 op, 410933377.00 ns, 410.9334 ms/op
+WorkloadActual  15: 1 op, 413107890.00 ns, 413.1079 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 407797312.00 ns, 407.7973 ms/op
+WorkloadResult   2: 1 op, 403519564.00 ns, 403.5196 ms/op
+WorkloadResult   3: 1 op, 409832344.00 ns, 409.8323 ms/op
+WorkloadResult   4: 1 op, 411644725.00 ns, 411.6447 ms/op
+WorkloadResult   5: 1 op, 413477517.00 ns, 413.4775 ms/op
+WorkloadResult   6: 1 op, 415615773.00 ns, 415.6158 ms/op
+WorkloadResult   7: 1 op, 402454353.00 ns, 402.4544 ms/op
+WorkloadResult   8: 1 op, 405125478.00 ns, 405.1255 ms/op
+WorkloadResult   9: 1 op, 411184523.00 ns, 411.1845 ms/op
+WorkloadResult  10: 1 op, 405661757.00 ns, 405.6618 ms/op
+WorkloadResult  11: 1 op, 404187218.00 ns, 404.1872 ms/op
+WorkloadResult  12: 1 op, 405752554.00 ns, 405.7526 ms/op
+WorkloadResult  13: 1 op, 403015162.00 ns, 403.0152 ms/op
+WorkloadResult  14: 1 op, 410933377.00 ns, 410.9334 ms/op
+WorkloadResult  15: 1 op, 413107890.00 ns, 413.1079 ms/op
+GC:  0 0 0 5792 1
+
+// AfterAll
+
+Mean = 406.6379 ms, StdErr = 0.8096 ms (0.20%); N = 30, StdDev = 4.4341 ms
+Min = 400.8403 ms, Q1 = 402.5542 ms, Median = 405.9112 ms, Q3 = 410.9334 ms, Max = 415.6158 ms
+IQR = 8.3792 ms, LowerFence = 389.9854 ms, UpperFence = 423.5021 ms
+ConfidenceInterval = [403.6754 ms; 409.6004 ms] (CI 99.9%), Margin = 2.9625 ms (0.73% of Mean)
+Skewness = 0.35, Kurtosis = 1.77, MValue = 2
+
+// **************************
+// Benchmark: AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+// *** Execute ***
+// Launch: 1 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 100)" --job "NetCoreApp21" --benchmarkId 11 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 277744.00 ns, 277.7440 us/op
+WorkloadJitting  1: 1 op, 431560959.00 ns, 431.5610 ms/op
+
+WorkloadWarmup   1: 1 op, 409818487.00 ns, 409.8185 ms/op
+WorkloadWarmup   2: 1 op, 402141599.00 ns, 402.1416 ms/op
+WorkloadWarmup   3: 1 op, 407515194.00 ns, 407.5152 ms/op
+WorkloadWarmup   4: 1 op, 410062722.00 ns, 410.0627 ms/op
+WorkloadWarmup   5: 1 op, 404249332.00 ns, 404.2493 ms/op
+WorkloadWarmup   6: 1 op, 412104549.00 ns, 412.1045 ms/op
+WorkloadWarmup   7: 1 op, 410986182.00 ns, 410.9862 ms/op
+WorkloadWarmup   8: 1 op, 411727432.00 ns, 411.7274 ms/op
+WorkloadWarmup   9: 1 op, 404356375.00 ns, 404.3564 ms/op
+WorkloadWarmup  10: 1 op, 411437014.00 ns, 411.4370 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 409756627.00 ns, 409.7566 ms/op
+WorkloadActual   2: 1 op, 406170194.00 ns, 406.1702 ms/op
+WorkloadActual   3: 1 op, 408893402.00 ns, 408.8934 ms/op
+WorkloadActual   4: 1 op, 415160015.00 ns, 415.1600 ms/op
+WorkloadActual   5: 1 op, 409386863.00 ns, 409.3869 ms/op
+WorkloadActual   6: 1 op, 409909093.00 ns, 409.9091 ms/op
+WorkloadActual   7: 1 op, 407973439.00 ns, 407.9734 ms/op
+WorkloadActual   8: 1 op, 403297183.00 ns, 403.2972 ms/op
+WorkloadActual   9: 1 op, 408771958.00 ns, 408.7720 ms/op
+WorkloadActual  10: 1 op, 414193548.00 ns, 414.1935 ms/op
+WorkloadActual  11: 1 op, 403683792.00 ns, 403.6838 ms/op
+WorkloadActual  12: 1 op, 405990888.00 ns, 405.9909 ms/op
+WorkloadActual  13: 1 op, 411759408.00 ns, 411.7594 ms/op
+WorkloadActual  14: 1 op, 410139211.00 ns, 410.1392 ms/op
+WorkloadActual  15: 1 op, 405722205.00 ns, 405.7222 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 409756627.00 ns, 409.7566 ms/op
+WorkloadResult   2: 1 op, 406170194.00 ns, 406.1702 ms/op
+WorkloadResult   3: 1 op, 408893402.00 ns, 408.8934 ms/op
+WorkloadResult   4: 1 op, 415160015.00 ns, 415.1600 ms/op
+WorkloadResult   5: 1 op, 409386863.00 ns, 409.3869 ms/op
+WorkloadResult   6: 1 op, 409909093.00 ns, 409.9091 ms/op
+WorkloadResult   7: 1 op, 407973439.00 ns, 407.9734 ms/op
+WorkloadResult   8: 1 op, 403297183.00 ns, 403.2972 ms/op
+WorkloadResult   9: 1 op, 408771958.00 ns, 408.7720 ms/op
+WorkloadResult  10: 1 op, 414193548.00 ns, 414.1935 ms/op
+WorkloadResult  11: 1 op, 403683792.00 ns, 403.6838 ms/op
+WorkloadResult  12: 1 op, 405990888.00 ns, 405.9909 ms/op
+WorkloadResult  13: 1 op, 411759408.00 ns, 411.7594 ms/op
+WorkloadResult  14: 1 op, 410139211.00 ns, 410.1392 ms/op
+WorkloadResult  15: 1 op, 405722205.00 ns, 405.7222 ms/op
+GC:  0 0 0 6016 1
+
+// AfterAll
+// Launch: 2 / 2
+// Execute: dotnet "da45e2cb-0625-45ec-b01c-c1561f85c83b.dll" --benchmarkName "Program+AccessMarks.DynamicReflect(sleepTime: 100)" --job "NetCoreApp21" --benchmarkId 11 in /Users/brandondimperio/projects/dynamicBench/bin/Release/netcoreapp2.1/da45e2cb-0625-45ec-b01c-c1561f85c83b/bin/Release/netcoreapp2.1
+Failed to set up high priority. Make sure you have the right permissions. Message: Permission denied
+// BeforeAnythingElse
+
+// Benchmark Process Environment Information:
+// Runtime=.NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+// GC=Concurrent Workstation
+// Job: NetCoreApp21(Runtime=Core, IterationCount=15, LaunchCount=2, WarmupCount=10)
+
+OverheadJitting  1: 1 op, 275812.00 ns, 275.8120 us/op
+WorkloadJitting  1: 1 op, 434576637.00 ns, 434.5766 ms/op
+
+WorkloadWarmup   1: 1 op, 410879193.00 ns, 410.8792 ms/op
+WorkloadWarmup   2: 1 op, 408760408.00 ns, 408.7604 ms/op
+WorkloadWarmup   3: 1 op, 405175334.00 ns, 405.1753 ms/op
+WorkloadWarmup   4: 1 op, 412711700.00 ns, 412.7117 ms/op
+WorkloadWarmup   5: 1 op, 407238722.00 ns, 407.2387 ms/op
+WorkloadWarmup   6: 1 op, 403686236.00 ns, 403.6862 ms/op
+WorkloadWarmup   7: 1 op, 401937527.00 ns, 401.9375 ms/op
+WorkloadWarmup   8: 1 op, 402229319.00 ns, 402.2293 ms/op
+WorkloadWarmup   9: 1 op, 401751167.00 ns, 401.7512 ms/op
+WorkloadWarmup  10: 1 op, 407410345.00 ns, 407.4103 ms/op
+
+// BeforeActualRun
+WorkloadActual   1: 1 op, 407979645.00 ns, 407.9796 ms/op
+WorkloadActual   2: 1 op, 403531490.00 ns, 403.5315 ms/op
+WorkloadActual   3: 1 op, 406033058.00 ns, 406.0331 ms/op
+WorkloadActual   4: 1 op, 401142440.00 ns, 401.1424 ms/op
+WorkloadActual   5: 1 op, 409302841.00 ns, 409.3028 ms/op
+WorkloadActual   6: 1 op, 401423269.00 ns, 401.4233 ms/op
+WorkloadActual   7: 1 op, 401746648.00 ns, 401.7466 ms/op
+WorkloadActual   8: 1 op, 405192194.00 ns, 405.1922 ms/op
+WorkloadActual   9: 1 op, 409518412.00 ns, 409.5184 ms/op
+WorkloadActual  10: 1 op, 408912222.00 ns, 408.9122 ms/op
+WorkloadActual  11: 1 op, 409954671.00 ns, 409.9547 ms/op
+WorkloadActual  12: 1 op, 404269336.00 ns, 404.2693 ms/op
+WorkloadActual  13: 1 op, 404394790.00 ns, 404.3948 ms/op
+WorkloadActual  14: 1 op, 408819230.00 ns, 408.8192 ms/op
+WorkloadActual  15: 1 op, 407781930.00 ns, 407.7819 ms/op
+
+// AfterActualRun
+WorkloadResult   1: 1 op, 407979645.00 ns, 407.9796 ms/op
+WorkloadResult   2: 1 op, 403531490.00 ns, 403.5315 ms/op
+WorkloadResult   3: 1 op, 406033058.00 ns, 406.0331 ms/op
+WorkloadResult   4: 1 op, 401142440.00 ns, 401.1424 ms/op
+WorkloadResult   5: 1 op, 409302841.00 ns, 409.3028 ms/op
+WorkloadResult   6: 1 op, 401423269.00 ns, 401.4233 ms/op
+WorkloadResult   7: 1 op, 401746648.00 ns, 401.7466 ms/op
+WorkloadResult   8: 1 op, 405192194.00 ns, 405.1922 ms/op
+WorkloadResult   9: 1 op, 409518412.00 ns, 409.5184 ms/op
+WorkloadResult  10: 1 op, 408912222.00 ns, 408.9122 ms/op
+WorkloadResult  11: 1 op, 409954671.00 ns, 409.9547 ms/op
+WorkloadResult  12: 1 op, 404269336.00 ns, 404.2693 ms/op
+WorkloadResult  13: 1 op, 404394790.00 ns, 404.3948 ms/op
+WorkloadResult  14: 1 op, 408819230.00 ns, 408.8192 ms/op
+WorkloadResult  15: 1 op, 407781930.00 ns, 407.7819 ms/op
+GC:  0 0 0 6016 1
+
+// AfterAll
+
+Mean = 407.3603 ms, StdErr = 0.6404 ms (0.16%); N = 30, StdDev = 3.5077 ms
+Min = 401.1424 ms, Q1 = 404.3948 ms, Median = 407.9765 ms, Q3 = 409.5184 ms, Max = 415.1600 ms
+IQR = 5.1236 ms, LowerFence = 396.7094 ms, UpperFence = 417.2038 ms
+ConfidenceInterval = [405.0168 ms; 409.7039 ms] (CI 99.9%), Margin = 2.3436 ms (0.58% of Mean)
+Skewness = 0.09, Kurtosis = 2.45, MValue = 2
+
+// ***** BenchmarkRunner: Finish  *****
+
+// * Export *
+  BenchmarkDotNet.Artifacts/results/Program.AccessMarks-report.csv
+  BenchmarkDotNet.Artifacts/results/Program.AccessMarks-report-github.md
+  BenchmarkDotNet.Artifacts/results/Program.AccessMarks-report.html
+
+// * Detailed results *
+AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 42.8826 us, StdErr = 0.3796 us (0.89%); N = 29, StdDev = 2.0441 us
+Min = 39.9779 us, Q1 = 41.0888 us, Median = 42.2504 us, Q3 = 44.8235 us, Max = 46.6919 us
+IQR = 3.7348 us, LowerFence = 35.4866 us, UpperFence = 50.4257 us
+ConfidenceInterval = [41.4881 us; 44.2772 us] (CI 99.9%), Margin = 1.3946 us (3.25% of Mean)
+Skewness = 0.19, Kurtosis = 1.52, MValue = 3.73
+-------------------- Histogram --------------------
+[39.396 us ; 40.598 us) | @@@
+[40.598 us ; 41.763 us) | @@@@@@@@@@
+[41.763 us ; 42.621 us) | @@
+[42.621 us ; 43.567 us) | 
+[43.567 us ; 44.731 us) | @@@@@@@
+[44.731 us ; 46.068 us) | @@@@@@
+[46.068 us ; 47.274 us) | @
+---------------------------------------------------
+
+AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 48.0425 us, StdErr = 0.1535 us (0.32%); N = 30, StdDev = 0.8407 us
+Min = 46.4437 us, Q1 = 47.5813 us, Median = 48.1647 us, Q3 = 48.7544 us, Max = 49.4710 us
+IQR = 1.1731 us, LowerFence = 45.8217 us, UpperFence = 50.5141 us
+ConfidenceInterval = [47.4809 us; 48.6042 us] (CI 99.9%), Margin = 0.5617 us (1.17% of Mean)
+Skewness = -0.39, Kurtosis = 2.05, MValue = 2
+-------------------- Histogram --------------------
+[46.207 us ; 47.544 us) | @@@@@@@
+[47.544 us ; 49.708 us) | @@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=0]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 48.5837 us, StdErr = 0.2285 us (0.47%); N = 30, StdDev = 1.2517 us
+Min = 46.5885 us, Q1 = 47.4476 us, Median = 48.5826 us, Q3 = 49.7064 us, Max = 50.5946 us
+IQR = 2.2588 us, LowerFence = 44.0593 us, UpperFence = 53.0946 us
+ConfidenceInterval = [47.7474 us; 49.4200 us] (CI 99.9%), Margin = 0.8363 us (1.72% of Mean)
+Skewness = 0.02, Kurtosis = 1.26, MValue = 4
+-------------------- Histogram --------------------
+[46.236 us ; 47.902 us) | @@@@@@@@@@@@@@
+[47.902 us ; 49.275 us) | @@
+[49.275 us ; 50.947 us) | @@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 5.4887 ms, StdErr = 0.0075 ms (0.14%); N = 30, StdDev = 0.0410 ms
+Min = 5.4258 ms, Q1 = 5.4493 ms, Median = 5.4895 ms, Q3 = 5.5304 ms, Max = 5.5651 ms
+IQR = 0.0812 ms, LowerFence = 5.3275 ms, UpperFence = 5.6522 ms
+ConfidenceInterval = [5.4613 ms; 5.5161 ms] (CI 99.9%), Margin = 0.0274 ms (0.50% of Mean)
+Skewness = 0.2, Kurtosis = 1.74, MValue = 2
+-------------------- Histogram --------------------
+[5.414 ms ; 5.577 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 5.5433 ms, StdErr = 0.0065 ms (0.12%); N = 29, StdDev = 0.0349 ms
+Min = 5.4940 ms, Q1 = 5.5095 ms, Median = 5.5417 ms, Q3 = 5.5673 ms, Max = 5.6423 ms
+IQR = 0.0577 ms, LowerFence = 5.4230 ms, UpperFence = 5.6538 ms
+ConfidenceInterval = [5.5195 ms; 5.5671 ms] (CI 99.9%), Margin = 0.0238 ms (0.43% of Mean)
+Skewness = 0.67, Kurtosis = 3.23, MValue = 2
+-------------------- Histogram --------------------
+[5.484 ms ; 5.652 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=1]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 5.5505 ms, StdErr = 0.0093 ms (0.17%); N = 30, StdDev = 0.0510 ms
+Min = 5.4186 ms, Q1 = 5.5151 ms, Median = 5.5534 ms, Q3 = 5.5804 ms, Max = 5.6380 ms
+IQR = 0.0653 ms, LowerFence = 5.4172 ms, UpperFence = 5.6783 ms
+ConfidenceInterval = [5.5164 ms; 5.5845 ms] (CI 99.9%), Margin = 0.0340 ms (0.61% of Mean)
+Skewness = -0.45, Kurtosis = 2.79, MValue = 2
+-------------------- Histogram --------------------
+[5.404 ms ; 5.652 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 68.7566 ms, StdErr = 0.3478 ms (0.51%); N = 30, StdDev = 1.9048 ms
+Min = 65.9099 ms, Q1 = 67.2842 ms, Median = 68.5812 ms, Q3 = 69.7907 ms, Max = 73.7988 ms
+IQR = 2.5065 ms, LowerFence = 63.5245 ms, UpperFence = 73.5504 ms
+ConfidenceInterval = [67.4839 ms; 70.0292 ms] (CI 99.9%), Margin = 1.2726 ms (1.85% of Mean)
+Skewness = 0.87, Kurtosis = 3.74, MValue = 2
+-------------------- Histogram --------------------
+[65.373 ms ; 67.615 ms) | @@@@@@@@@@
+[67.615 ms ; 69.060 ms) | @@@@@@
+[69.060 ms ; 71.528 ms) | @@@@@@@@@@@@
+[71.528 ms ; 74.335 ms) | @@
+---------------------------------------------------
+
+AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 75.8012 ms, StdErr = 0.3313 ms (0.44%); N = 30, StdDev = 1.8146 ms
+Min = 72.7324 ms, Q1 = 74.2823 ms, Median = 75.7851 ms, Q3 = 76.9497 ms, Max = 78.9209 ms
+IQR = 2.6674 ms, LowerFence = 70.2811 ms, UpperFence = 80.9509 ms
+ConfidenceInterval = [74.5888 ms; 77.0136 ms] (CI 99.9%), Margin = 1.2124 ms (1.60% of Mean)
+Skewness = 0.17, Kurtosis = 1.92, MValue = 2
+-------------------- Histogram --------------------
+[72.221 ms ; 74.910 ms) | @@@@@@@@@@@
+[74.910 ms ; 76.895 ms) | @@@@@@@@@@@
+[76.895 ms ; 79.291 ms) | @@@@@@@@
+---------------------------------------------------
+
+AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=15]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 74.8803 ms, StdErr = 0.3774 ms (0.50%); N = 30, StdDev = 2.0669 ms
+Min = 71.5370 ms, Q1 = 73.6797 ms, Median = 74.5916 ms, Q3 = 76.1598 ms, Max = 79.6526 ms
+IQR = 2.4801 ms, LowerFence = 69.9596 ms, UpperFence = 79.8799 ms
+ConfidenceInterval = [73.4993 ms; 76.2612 ms] (CI 99.9%), Margin = 1.3809 ms (1.84% of Mean)
+Skewness = 0.52, Kurtosis = 2.75, MValue = 2
+-------------------- Histogram --------------------
+[70.955 ms ; 73.451 ms) | @@@@@@@
+[73.451 ms ; 76.400 ms) | @@@@@@@@@@@@@@@@
+[76.400 ms ; 80.235 ms) | @@@@@@@
+---------------------------------------------------
+
+AccessMarks.RunPublic: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 405.4532 ms, StdErr = 0.7435 ms (0.18%); N = 29, StdDev = 4.0041 ms
+Min = 400.9459 ms, Q1 = 402.4036 ms, Median = 404.4074 ms, Q3 = 407.1702 ms, Max = 417.9755 ms
+IQR = 4.7666 ms, LowerFence = 395.2537 ms, UpperFence = 414.3200 ms
+ConfidenceInterval = [402.7215 ms; 408.1849 ms] (CI 99.9%), Margin = 2.7317 ms (0.67% of Mean)
+Skewness = 1.4, Kurtosis = 4.49, MValue = 2
+-------------------- Histogram --------------------
+[400.128 ms ; 419.116 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.Reflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 406.6379 ms, StdErr = 0.8096 ms (0.20%); N = 30, StdDev = 4.4341 ms
+Min = 400.8403 ms, Q1 = 402.5542 ms, Median = 405.9112 ms, Q3 = 410.9334 ms, Max = 415.6158 ms
+IQR = 8.3792 ms, LowerFence = 389.9854 ms, UpperFence = 423.5021 ms
+ConfidenceInterval = [403.6754 ms; 409.6004 ms] (CI 99.9%), Margin = 2.9625 ms (0.73% of Mean)
+Skewness = 0.35, Kurtosis = 1.77, MValue = 2
+-------------------- Histogram --------------------
+[399.592 ms ; 416.195 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+AccessMarks.DynamicReflect: NetCoreApp21(Runtime=Core, Toolchain=.NET Core 2.1, IterationCount=15, LaunchCount=2, WarmupCount=10) [sleepTime=100]
+Runtime = .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT; GC = Concurrent Workstation
+Mean = 407.3603 ms, StdErr = 0.6404 ms (0.16%); N = 30, StdDev = 3.5077 ms
+Min = 401.1424 ms, Q1 = 404.3948 ms, Median = 407.9765 ms, Q3 = 409.5184 ms, Max = 415.1600 ms
+IQR = 5.1236 ms, LowerFence = 396.7094 ms, UpperFence = 417.2038 ms
+ConfidenceInterval = [405.0168 ms; 409.7039 ms] (CI 99.9%), Margin = 2.3436 ms (0.58% of Mean)
+Skewness = 0.09, Kurtosis = 2.45, MValue = 2
+-------------------- Histogram --------------------
+[400.155 ms ; 416.148 ms) | @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+---------------------------------------------------
+
+// * Summary *
+
+BenchmarkDotNet=v0.11.5, OS=macOS Mojave 10.14.5 (18F203) [Darwin 18.6.0]
+Intel Core i7-8750H CPU 2.20GHz (Coffee Lake), 1 CPU, 12 logical and 6 physical cores
+.NET Core SDK=2.2.203
+  [Host]       : .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT DEBUG
+  NetCoreApp21 : .NET Core 2.1.10 (CoreCLR 4.6.27514.02, CoreFX 4.6.27514.02), 64bit RyuJIT
+
+Job=NetCoreApp21  Runtime=Core  Toolchain=.NET Core 2.1  
+IterationCount=15  LaunchCount=2  WarmupCount=10  
+
+|         Method | sleepTime |          Mean |         Error |        StdDev |  Gen 0 | Gen 1 | Gen 2 | Allocated |
+|--------------- |---------- |--------------:|--------------:|--------------:|-------:|------:|------:|----------:|
+|      RunPublic |         0 |      42.88 us |     1.3946 us |     2.0441 us | 0.9766 |     - |     - |   3.72 KB |
+|        Reflect |         0 |      48.04 us |     0.5617 us |     0.8407 us | 1.0376 |     - |     - |   3.81 KB |
+| DynamicReflect |         0 |      48.58 us |     0.8363 us |     1.2517 us | 1.0376 |     - |     - |   3.94 KB |
+|      RunPublic |         1 |   5,488.67 us |    27.4092 us |    41.0249 us |      - |     - |     - |   3.91 KB |
+|        Reflect |         1 |   5,543.29 us |    23.8211 us |    34.9166 us |      - |     - |     - |   4.02 KB |
+| DynamicReflect |         1 |   5,550.47 us |    34.0464 us |    50.9591 us |      - |     - |     - |   4.15 KB |
+|      RunPublic |        15 |  68,756.56 us | 1,272.6236 us | 1,904.8031 us |      - |     - |     - |   3.91 KB |
+|        Reflect |        15 |  75,801.20 us | 1,212.3736 us | 1,814.6238 us |      - |     - |     - |   4.24 KB |
+| DynamicReflect |        15 |  74,880.26 us | 1,380.9247 us | 2,066.9031 us |      - |     - |     - |   4.38 KB |
+|      RunPublic |       100 | 405,453.18 us | 2,731.6902 us | 4,004.0760 us |      - |     - |     - |   3.91 KB |
+|        Reflect |       100 | 406,637.86 us | 2,962.5000 us | 4,434.1305 us |      - |     - |     - |   5.66 KB |
+| DynamicReflect |       100 | 407,360.33 us | 2,343.5643 us | 3,507.7367 us |      - |     - |     - |   5.88 KB |
+
+// * Warnings *
+MultimodalDistribution
+  AccessMarks.RunPublic: NetCoreApp21      -> It seems that the distribution is bimodal (mValue = 3.73)
+  AccessMarks.DynamicReflect: NetCoreApp21 -> It seems that the distribution is bimodal (mValue = 4)
+
+// * Hints *
+Outliers
+  AccessMarks.RunPublic: NetCoreApp21 -> Something went wrong with outliers: Size(WorkloadActual) = 30, Size(WorkloadActual/Outliers) = 0, Size(Result) = 29), OutlierMode = OnlyUpper
+  AccessMarks.RunPublic: NetCoreApp21 -> Something went wrong with outliers: Size(WorkloadActual) = 30, Size(WorkloadActual/Outliers) = 2, Size(Result) = 30), OutlierMode = OnlyUpper
+  AccessMarks.RunPublic: NetCoreApp21 -> 1 outlier  was  removed (417.98 ms)
+
+// * Legends *
+  sleepTime : Value of the 'sleepTime' parameter
+  Mean      : Arithmetic mean of all measurements
+  Error     : Half of 99.9% confidence interval
+  StdDev    : Standard deviation of all measurements
+  Gen 0     : GC Generation 0 collects per 1000 operations
+  Gen 1     : GC Generation 1 collects per 1000 operations
+  Gen 2     : GC Generation 2 collects per 1000 operations
+  Allocated : Allocated memory per single operation (managed only, inclusive, 1KB = 1024B)
+  1 us      : 1 Microsecond (0.000001 sec)
+
+// * Diagnostic Output - MemoryDiagnoser *
+
+
+// ***** BenchmarkRunner: End *****
+// ** Remained 0 benchmark(s) to run **
+Run time: 00:06:59 (419.31 sec), executed benchmarks: 12
+
+Global total time: 00:07:05 (425.9 sec), executed benchmarks: 12
+// * Artifacts cleanup *
